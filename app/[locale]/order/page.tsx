@@ -44,58 +44,56 @@ export default function OrderPage() {
 
   return (
     <div className="pt-20 sm:pt-24">
-      {/* Hero Order 3D */}
-      <section className="hero-3d py-16 sm:py-24 md:py-32 relative">
+      {/* Hero Order - Design Moderne */}
+      <section className="hero-modern py-16 sm:py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100"></div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-white/80 backdrop-blur-md border border-blue-200 rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 mb-6 sm:mb-8 shadow-2xl">
-              <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-              <span className="text-xs sm:text-sm font-semibold text-gray-700">Commande Énergétique 3D</span>
+          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+            <div className="inline-flex items-center space-x-2 sm:space-x-4 glass-effect rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 mb-8 sm:mb-12 shadow-modern">
+              <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+              <span className="text-xs sm:text-sm font-bold text-green-700">Commande Énergétique Moderne</span>
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 sm:mb-8">
-              <span className="text-gradient">Commandez</span>{" "}
-              <span className="text-gray-800">en 3D</span>
-              <br />
-              <span className="text-lg sm:text-xl md:text-3xl lg:text-5xl text-gray-600 font-normal">
-                Solutions Énergétiques Instantanées
-              </span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6 animate-slide-up">
+              <span className="text-gradient-3d">Commandez</span>{" "}
+              <span className="text-gray-800">Facilement</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
-              Passez votre commande avec notre système révolutionnaire de commande 3D. 
+              Passez votre commande avec notre système moderne et intuitif. 
               Livraison rapide, qualité garantie, service client exceptionnel.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Types de Commandes 3D */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Types de Commandes - Design Moderne */}
+      <section className="section-modern bg-white py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
-              <span className="text-gradient">Nos Services</span>{" "}
+              <span className="text-gradient-3d">Nos Services</span>{" "}
               <span className="text-gray-800">de Commande</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             {orderTypes.map((order, index) => (
-              <div key={order.title} className="card-3d group p-6 sm:p-8" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className={`icon-3d mb-6 sm:mb-8 bg-gradient-to-br ${order.color} w-16 h-16 sm:w-20 sm:h-20`}>
+              <div key={order.title} className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: `${index * 0.2}s`}}>
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500 mx-auto`}>
                   {order.icon}
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-gradient-modern transition-all duration-300 text-center">
                   {order.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base text-center">
                   {order.description}
                 </p>
 
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 mb-4 sm:mb-6">{order.price}</div>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-600 mb-4 sm:mb-6 text-center">{order.price}</div>
 
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {order.features.map((feature, idx) => (
@@ -106,7 +104,7 @@ export default function OrderPage() {
                   ))}
                 </div>
 
-                <button className="w-full btn-primary flex items-center justify-center space-x-2 py-3 sm:py-4 text-sm sm:text-base">
+                <button className="w-full btn-modern flex items-center justify-center space-x-2 py-3 sm:py-4 text-sm sm:text-base">
                   <span>Commander maintenant</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>

@@ -1,5 +1,5 @@
 "use client";
-import { Building2, Target, Sparkles, Users, Award, ArrowRight, ChevronRight, Star, Zap } from "lucide-react";
+import { Building2, Target, Sparkles, Award, ArrowRight, ChevronRight, Star, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
@@ -53,7 +53,7 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 Commercialiser des produits pétroliers de qualité (GASOIL, SUPER, HUILE) et 
                 fournir des services de transport spécialisés avec une flotte moderne de plus de 
-                200 véhicules articulés, en privilégiant nos employés et l'environnement.
+                200 véhicules articulés, en privilégiant nos employés et l&apos;environnement.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 Maintenir notre position de LEADER incontournable dans la vente et location de 
                 véhicules pétroliers, tout en étendant notre présence avec nos stations à Bamako 
-                et à l'international pour une vision mondiale.
+                et à l&apos;international pour une vision mondiale.
               </p>
             </div>
           </div>

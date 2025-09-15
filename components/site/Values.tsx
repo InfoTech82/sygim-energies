@@ -44,8 +44,8 @@ export default function Values() {
             <span className="text-gray-900">Fondamentales</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            L'Excellence, la Confiance, le Respect et la Responsabilité guident SYGIM ENERGIES 
-            dans ses activités et définissent notre identité d'entreprise
+            L&apos;Excellence, la Confiance, le Respect et la Responsabilité guident SYGIM ENERGIES 
+            dans ses activités et définissent notre identité d&apos;entreprise
           </p>
         </div>
 

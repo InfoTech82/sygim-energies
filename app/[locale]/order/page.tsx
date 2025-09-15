@@ -1,5 +1,5 @@
 "use client";
-import { ShoppingCart, Fuel, Truck, Car, CreditCard, Clock, CheckCircle, Sparkles, ArrowRight, Phone, Gauge } from "lucide-react";
+import { ShoppingCart, Fuel, Truck, Car, CreditCard, CheckCircle, ArrowRight, Phone, Gauge } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
@@ -150,7 +150,7 @@ export default function OrderPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              Besoin d'une Commande Urgente ?
+              Besoin d&apos;une Commande Urgente ?
             </h2>
             <p className="text-xl mb-12 opacity-90">
               Notre équipe est disponible 24/7 pour répondre à vos besoins énergétiques

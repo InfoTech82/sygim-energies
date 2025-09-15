@@ -143,7 +143,7 @@ const services = [
             Commencez Votre Transformation Énergétique
           </h2>
           <p className="text-2xl mb-16 opacity-90 max-w-4xl mx-auto animate-slide-up">
-            Rejoignez les entreprises qui ont choisi l'excellence avec nos solutions modernes
+            Rejoignez les entreprises qui ont choisi l&apos;excellence avec nos solutions modernes
           </p>
           
           <Link href={`${base}/order`}>

@@ -1,5 +1,5 @@
 "use client";
-import { Truck, MapPin, Shield, Clock, Fuel, Sparkles, ArrowRight } from "lucide-react";
+import { Truck, MapPin, Shield, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
@@ -33,7 +33,7 @@ export default function FleetPage() {
     {
       type: "Utilitaires",
       capacity: "3,5T",
-      features: ["Polyvalence", "Robustesse", "Facilité d'utilisation"],
+      features: ["Polyvalence", "Robustesse", "Facilité d&apos;utilisation"],
       image: "/images/fleet/utilitaire.jpg", // Placez votre image ici
       fallbackEmoji: "🚐"
     },
@@ -47,7 +47,7 @@ export default function FleetPage() {
   ];
 
   const stations = [
-    { name: "Stations Côte d'Ivoire", location: "Abidjan & Intérieur", services: ["Vente gros/détail", "GASOIL Premium", "SUPER"] },
+    { name: "Stations Côte d&apos;Ivoire", location: "Abidjan & Intérieur", services: ["Vente gros/détail", "GASOIL Premium", "SUPER"] },
     { name: "Stations Bamako", location: "Mali", services: ["Expansion internationale", "Produits pétroliers", "Service local"] },
     { name: "Réseau Mondial", location: "Vision Internationale", services: ["Développement global", "Partenariats", "Croissance"] },
   ];
@@ -73,7 +73,7 @@ export default function FleetPage() {
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto">
-              SYGIM ENERGIES SAS dispose d'une flotte conséquente de plus de 200 véhicules articulés 
+              SYGIM ENERGIES SAS dispose d&apos;une flotte conséquente de plus de 200 véhicules articulés 
               toujours prête à servir et honorer ses engagements avec le meilleur service.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function FleetPage() {
       <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {fleetStats.map((stat, index) => (
+            {fleetStats.map((stat) => (
               <div key={stat.label} className="stat-3d">
                 <div className={`icon-3d mx-auto mb-6 bg-gradient-to-br ${stat.color}`}>
                   {stat.icon}
@@ -111,7 +111,7 @@ export default function FleetPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {vehicles.map((vehicle, index) => (
+            {vehicles.map((vehicle) => (
               <div key={vehicle.type} className="card-3d group">
                 {/* Image du véhicule en 3D */}
                 <div className="mb-8">
@@ -160,7 +160,7 @@ export default function FleetPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {stations.map((station, index) => (
+            {stations.map((station) => (
               <div key={station.name} className="card-3d">
                 <div className="icon-3d mb-6 bg-gradient-to-br from-green-500 to-green-600">
                   <MapPin className="w-8 h-8" />

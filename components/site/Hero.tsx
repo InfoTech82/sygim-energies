@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Zap, Truck, Building, Shield, Star, Sparkles, ChevronRight } from "lucide-react";
+import { ArrowRight, Truck, Building, Shield, Star, Sparkles, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const pathname = usePathname();

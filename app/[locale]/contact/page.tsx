@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, ArrowRight } from "lucide-react";
 import ContactForm from "@/components/site/ContactForm";
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
     {
       icon: <MapPin className="w-8 h-8" />,
       title: "Siège Social",
-      value: "Abidjan, Côte d'Ivoire",
+      value: "Abidjan, Côte d&apos;Ivoire",
       description: "Centre de distribution et stations",
       color: "from-purple-500 to-purple-600"
     },
@@ -171,7 +171,7 @@ export default function ContactPage() {
             Une Question ? Un Projet ?
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto">
-            Notre équipe d'experts est prête à vous accompagner dans tous vos projets énergétiques
+            Notre équipe d&apos;experts est prête à vous accompagner dans tous vos projets énergétiques
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Our Services",
+    "fleet": "Fleet & Stations",
+    "order": "Order",
+    "contact": "Contact"
+  },
+  "cta": {
+    "orderNow": "Order now"
+  },
+  "company": {
+    "name": "SYGIM ENERGIES SAS",
+    "capital": "Capital 10 Billion FCFA",
+    "slogan": "Petroleum Transport Leader",
+    "description": "Petroleum products marketing and specialized transport"
+  },
+  "products": {
+    "gasoil": "Premium DIESEL",
+    "super": "Unleaded GASOLINE",
+    "oil": "Motor Oils",
+    "transport": "Specialized Transport"
+  }
+}
+
+

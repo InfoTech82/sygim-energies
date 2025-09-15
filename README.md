@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SYGIM ENERGIES SAS - Site Web
 
-## Getting Started
+Site web officiel de SYGIM ENERGIES SAS, leader du transport pétrolier en Côte d'Ivoire.
 
-First, run the development server:
+## 🚀 Déploiement
+
+### Option 1: Vercel (Recommandé)
+
+1. **Connecter le repository GitHub à Vercel**
+2. **Configuration automatique** - Vercel détectera Next.js
+3. **Variables d'environnement** (si nécessaire) :
+   ```
+   NEXTAUTH_SECRET=votre_secret
+   NEXTAUTH_URL=https://votre-domaine.vercel.app
+   ```
+
+### Option 2: Netlify
+
+1. **Connecter le repository GitHub à Netlify**
+2. **Configuration** :
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+3. **Redirections** : Configurées dans `netlify.toml`
+
+### Option 3: Railway
+
+1. **Connecter le repository GitHub à Railway**
+2. **Configuration automatique** - Railway détectera Next.js
+3. **Variables d'environnement** via le dashboard Railway
+
+## 🛠️ Développement Local
 
 ```bash
+# Installation des dépendances
+npm install
+
+# Démarrage du serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build pour la production
+npm run build
+
+# Démarrage du serveur de production
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Structure du Projet
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/` - Pages Next.js avec App Router
+- `components/` - Composants React réutilisables
+- `public/images/` - Images et assets statiques
+- `messages/` - Fichiers de traduction (FR/EN)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Fonctionnalités
 
-## Learn More
+- ✅ **Multilingue** (Français/Anglais)
+- ✅ **Responsive Design**
+- ✅ **Loader animé**
+- ✅ **Formulaire de contact**
+- ✅ **Optimisé SEO**
+- ✅ **Performance optimisée**
 
-To learn more about Next.js, take a look at the following resources:
+## 📧 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pour toute question technique, contactez l'équipe de développement.

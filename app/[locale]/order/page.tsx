@@ -157,15 +157,15 @@ export default function OrderPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 animate-fade-in">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300 card-modern">
                 <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande Téléphonique</h3>
-                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Appelez-nous directement pour une commande express</p>
-                <div className="text-xl sm:text-2xl font-bold">+223 77 17 60 60</div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-green-600">Commande Téléphonique</h3>
+                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6 text-green-600">Appelez-nous directement pour une commande express</p>
+                <div className="text-xl sm:text-2xl font-bold text-green-600">+223 77 17 60 60</div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300 card-modern">
                 <CreditCard className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6" />
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande en Ligne</h3>
-                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Utilisez notre formulaire de contact moderne</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-green-600">Commande en Ligne</h3>
+                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6 text-green-600">Utilisez notre formulaire de contact moderne</p>
                 <Link href={`${base}/contact`}>
                   <button className="bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-modern hover:shadow-modern-lg">
                     Formulaire de Contact

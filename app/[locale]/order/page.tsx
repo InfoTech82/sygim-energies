@@ -80,27 +80,27 @@ export default function OrderPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             {orderTypes.map((order, index) => (
               <div key={order.title} className="card-3d group p-6 sm:p-8" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className={`icon-3d mb-6 sm:mb-8 bg-gradient-to-br ${order.color} w-16 h-16 sm:w-20 sm:h-20 mx-auto`}>
+                <div className={`icon-3d mb-6 sm:mb-8 bg-gradient-to-br ${order.color} w-16 h-16 sm:w-20 sm:h-20`}>
                   {order.icon}
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300 text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300">
                   {order.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base text-center">
+                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                   {order.description}
                 </p>
 
-                <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-4 sm:mb-6 text-center">{order.price}</div>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 mb-4 sm:mb-6">{order.price}</div>
 
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {order.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2 sm:space-x-3">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
                       <span className="text-gray-600 text-sm sm:text-base">{feature}</span>
                     </div>
                   ))}
@@ -131,13 +131,13 @@ export default function OrderPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {orderSteps.map((step, index) => (
-              <div key={step.step} className="stat-3d p-6 sm:p-8" style={{animationDelay: `${index * 0.15}s`}}>
+              <div key={step.step} className="stat-3d p-4 sm:p-6" style={{animationDelay: `${index * 0.15}s`}}>
                 <div className="icon-3d mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-blue-500 to-blue-600 w-12 h-12 sm:w-16 sm:h-16">
                   {step.icon}
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-gradient mb-2">Étape {step.step}</div>
-                <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3 text-center">{step.title}</h4>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-center">{step.description}</p>
+                <div className="text-2xl sm:text-3xl font-black text-gradient mb-1 sm:mb-2">Étape {step.step}</div>
+                <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">{step.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -145,31 +145,31 @@ export default function OrderPage() {
       </section>
 
       {/* Contact Rapide 3D */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-20"></div>
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
               Besoin d&apos;une Commande Urgente ?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 opacity-90 px-4">
+            <p className="text-xl mb-12 opacity-90">
               Notre équipe est disponible 24/7 pour répondre à vos besoins énergétiques
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300">
-                <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande Téléphonique</h3>
-                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Appelez-nous directement pour une commande express</p>
-                <div className="text-xl sm:text-2xl font-bold">+223 77 17 60 60</div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                <Phone className="w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-4">Commande Téléphonique</h3>
+                <p className="text-lg opacity-90 mb-6">Appelez-nous directement pour une commande express</p>
+                <div className="text-2xl font-bold">+223 77 17 60 60</div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300">
-                <CreditCard className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande en Ligne</h3>
-                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Utilisez notre formulaire de contact 3D</p>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                <CreditCard className="w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-4">Commande en Ligne</h3>
+                <p className="text-lg opacity-90 mb-6">Utilisez notre formulaire de contact 3D</p>
                 <Link href={`${base}/contact`}>
-                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold transition-all duration-300 text-sm sm:text-base">
+                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold transition-all duration-300">
                     Formulaire 3D
                   </button>
                 </Link>

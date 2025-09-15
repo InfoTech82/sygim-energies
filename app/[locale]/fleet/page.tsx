@@ -130,7 +130,7 @@ export default function FleetPage() {
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {vehicle.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2 sm:space-x-3">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full flex-shrink-0"></div>
                       <span className="text-sm sm:text-base text-gray-600">{feature}</span>
                     </div>
                   ))}
@@ -138,7 +138,7 @@ export default function FleetPage() {
 
                 <button className="w-full btn-primary flex items-center justify-center space-x-2 py-3 sm:py-4 text-sm sm:text-base">
                   <span>Réserver maintenant</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             ))}
@@ -147,33 +147,33 @@ export default function FleetPage() {
       </section>
 
       {/* Stations 3D */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+      <section className="py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
               <span className="text-gradient">Nos Stations</span>{" "}
               <span className="text-gray-800">Service</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Un réseau de stations modernes à travers Abidjan
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {stations.map((station) => (
-              <div key={station.name} className="card-3d p-6 sm:p-8">
-                <div className="icon-3d mb-4 sm:mb-6 bg-gradient-to-br from-green-500 to-green-600 w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-                  <MapPin className="w-6 h-6 sm:w-8 sm:h-8" />
+              <div key={station.name} className="card-3d">
+                <div className="icon-3d mb-6 bg-gradient-to-br from-green-500 to-green-600">
+                  <MapPin className="w-8 h-8" />
                 </div>
                 
-                <h4 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">{station.name}</h4>
-                <p className="text-blue-600 font-semibold mb-4 text-center">{station.location}</p>
+                <h4 className="text-xl font-bold text-gray-800 mb-2">{station.name}</h4>
+                <p className="text-blue-600 font-semibold mb-4">{station.location}</p>
                 
                 <div className="space-y-2">
                   {station.services.map((service, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-600 text-xs sm:text-sm">{service}</span>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-gray-600 text-sm">{service}</span>
                     </div>
                   ))}
                 </div>
@@ -184,27 +184,27 @@ export default function FleetPage() {
       </section>
 
       {/* CTA Section 3D */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-20"></div>
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl font-black mb-6">
             Prêt à Découvrir Notre Flotte ?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 opacity-90 max-w-3xl mx-auto px-4">
+          <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto">
             Contactez-nous pour une démonstration personnalisée de nos véhicules et services
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Link href={`${base}/contact`} className="w-full sm:w-auto">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 flex items-center justify-center space-x-2 sm:space-x-3 w-full sm:w-auto">
-                <Truck className="w-5 h-5 sm:w-6 sm:h-6" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link href={`${base}/contact`}>
+              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 flex items-center space-x-3">
+                <Truck className="w-6 h-6" />
                 <span>Planifier une visite</span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                <ArrowRight className="w-6 h-6" />
               </button>
             </Link>
             
-            <Link href={`${base}/order`} className="w-full sm:w-auto">
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
+            <Link href={`${base}/order`}>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Commander maintenant
               </button>
             </Link>

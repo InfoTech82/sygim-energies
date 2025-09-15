@@ -36,10 +36,10 @@ export default function Navbar() {
               priority
             />
           </div>
-          <div className="hidden sm:block">
+          {/* <div className="hidden sm:block">
             <div className="text-lg sm:text-xl font-black text-gradient-3d">SYGIM ENERGIES</div>
             <div className="text-xs text-green-600 font-semibold tracking-wider uppercase">SAS • Capital 10M FCFA</div>
-          </div>
+          </div> */}
         </Link>
 
         {/* Navigation Desktop - Style Moderne */}

@@ -40,11 +40,11 @@ export default function ContactForm({ variant = "contact" }: Readonly<{ variant?
       <div className="grid gap-2 sm:grid-cols-2">
         <div className="grid gap-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" name="email" type="email" required placeholder="vous@exemple.com" />
+          <Input id="email" name="email" type="email" required placeholder="doe@exemple.com" />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="phone">Téléphone</Label>
-          <Input id="phone" name="phone" placeholder="+225 ..." />
+          <Input id="phone" name="phone" placeholder="+223 ..." />
         </div>
       </div>
       <div className="grid gap-2">

@@ -114,61 +114,61 @@ export default function OrderPage() {
         </div>
       </section>
 
-      {/* Processus de Commande 3D */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+      {/* Processus de Commande - Design Moderne */}
+      <section className="section-modern bg-gradient-to-br from-green-50 to-gray-50 py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
-              <span className="text-gradient">Processus de</span>{" "}
-              <span className="text-gray-800">Commande 3D</span>
+              <span className="text-gradient-3d">Processus de</span>{" "}
+              <span className="text-gray-800">Commande</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               Un processus simplifié en 4 étapes pour une expérience optimale
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {orderSteps.map((step, index) => (
-              <div key={step.step} className="stat-3d p-4 sm:p-6" style={{animationDelay: `${index * 0.15}s`}}>
-                <div className="icon-3d mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-blue-500 to-blue-600 w-12 h-12 sm:w-16 sm:h-16">
+              <div key={step.step} className="stat-modern card-3d animate-scale-in p-4 sm:p-6" style={{animationDelay: `${index * 0.15}s`}}>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                   {step.icon}
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-gradient mb-1 sm:mb-2">Étape {step.step}</div>
-                <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">{step.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+                <div className="text-2xl sm:text-3xl font-black text-gradient-modern mb-1 sm:mb-2">Étape {step.step}</div>
+                <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3 text-center">{step.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed text-center">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Rapide 3D */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-pattern opacity-20"></div>
-        <div className="container mx-auto px-6 relative z-10">
+      {/* Contact Rapide - Design Moderne */}
+      <section className="section-modern gradient-green text-white relative overflow-hidden py-12 sm:py-16">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 animate-fade-in">
               Besoin d&apos;une Commande Urgente ?
             </h2>
-            <p className="text-xl mb-12 opacity-90">
+            <p className="text-lg sm:text-xl mb-12 sm:mb-16 opacity-90 animate-slide-up px-4">
               Notre équipe est disponible 24/7 pour répondre à vos besoins énergétiques
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <Phone className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Commande Téléphonique</h3>
-                <p className="text-lg opacity-90 mb-6">Appelez-nous directement pour une commande express</p>
-                <div className="text-2xl font-bold">+223 77 17 60 60</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 animate-fade-in">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300 card-modern">
+                <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6" />
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande Téléphonique</h3>
+                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Appelez-nous directement pour une commande express</p>
+                <div className="text-xl sm:text-2xl font-bold">+223 77 17 60 60</div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <CreditCard className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Commande en Ligne</h3>
-                <p className="text-lg opacity-90 mb-6">Utilisez notre formulaire de contact 3D</p>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300 card-modern">
+                <CreditCard className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6" />
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Commande en Ligne</h3>
+                <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">Utilisez notre formulaire de contact moderne</p>
                 <Link href={`${base}/contact`}>
-                  <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold transition-all duration-300">
-                    Formulaire 3D
+                  <button className="bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-modern hover:shadow-modern-lg">
+                    Formulaire de Contact
                   </button>
                 </Link>
               </div>

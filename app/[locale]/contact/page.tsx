@@ -59,26 +59,26 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 sm:pt-24">
       {/* Hero Contact 3D */}
-      <section className="hero-3d py-32 relative">
-        <div className="container mx-auto px-6 relative z-10">
+      <section className="hero-3d py-16 sm:py-24 md:py-32 relative">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-3 bg-white/80 backdrop-blur-md border border-blue-200 rounded-full px-8 py-4 mb-8 shadow-2xl">
-              <MessageCircle className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-semibold text-gray-700">Contact SYGIM ENERGIES SAS</span>
+            <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-white/80 backdrop-blur-md border border-blue-200 rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 mb-6 sm:mb-8 shadow-2xl">
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+              <span className="text-xs sm:text-sm font-semibold text-gray-700">Contact SYGIM ENERGIES SAS</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 sm:mb-8">
               <span className="text-gradient">Contactez</span>{" "}
               <span className="text-gray-800">SYGIM ENERGIES</span>
               <br />
-              <span className="text-3xl md:text-5xl text-gray-600 font-normal">
+              <span className="text-lg sm:text-xl md:text-3xl lg:text-5xl text-gray-600 font-normal">
                 Service Client Bilingue
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
               BOUBACAR TRAORE, notre responsable RHQSE, et toute notre équipe sont à votre disposition 
               pour répondre à vos besoins en produits pétroliers et transport spécialisé.
             </p>
@@ -87,17 +87,17 @@ export default function ContactPage() {
       </section>
 
       {/* Informations de Contact 3D */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
             {contactInfo.map((info, index) => (
-              <div key={info.title} className="stat-3d" style={{animationDelay: `${index * 0.15}s`}}>
-                <div className={`icon-3d mx-auto mb-6 bg-gradient-to-br ${info.color}`}>
+              <div key={info.title} className="stat-3d p-6 sm:p-8" style={{animationDelay: `${index * 0.15}s`}}>
+                <div className={`icon-3d mx-auto mb-4 sm:mb-6 bg-gradient-to-br ${info.color} w-12 h-12 sm:w-16 sm:h-16`}>
                   {info.icon}
                 </div>
-                <h4 className="text-lg font-bold text-gray-800 mb-2">{info.title}</h4>
-                <div className="text-lg font-semibold text-blue-600 mb-2">{info.value}</div>
-                <p className="text-gray-600 text-sm leading-relaxed">{info.description}</p>
+                <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 text-center">{info.title}</h4>
+                <div className="text-base sm:text-lg font-semibold text-blue-600 mb-2 text-center">{info.value}</div>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-center">{info.description}</p>
               </div>
             ))}
           </div>
@@ -105,36 +105,36 @@ export default function ContactPage() {
       </section>
 
       {/* Méthodes de Contact 3D */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
               <span className="text-gradient">Comment Nous</span>{" "}
               <span className="text-gray-800">Contacter ?</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Choisissez la méthode qui vous convient le mieux
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {contactMethods.map((method, index) => (
-              <div key={method.title} className="card-3d group text-center" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className={`icon-3d mx-auto mb-6 bg-gradient-to-br ${method.color}`}>
+              <div key={method.title} className="card-3d group text-center p-6 sm:p-8" style={{animationDelay: `${index * 0.2}s`}}>
+                <div className={`icon-3d mx-auto mb-4 sm:mb-6 bg-gradient-to-br ${method.color} w-12 h-12 sm:w-16 sm:h-16`}>
                   {method.icon}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gradient transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300">
                   {method.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <p className="text-gray-600 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                   {method.description}
                 </p>
 
-                <button className="btn-primary flex items-center justify-center space-x-2 mx-auto">
+                <button className="btn-primary flex items-center justify-center space-x-2 mx-auto py-3 sm:py-4 text-sm sm:text-base">
                   <span>{method.action}</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </div>
             ))}
@@ -143,46 +143,46 @@ export default function ContactPage() {
       </section>
 
       {/* Formulaire de Contact 3D */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
                 <span className="text-gradient">Formulaire</span>{" "}
                 <span className="text-gray-800">de Contact 3D</span>
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">
                 Remplissez le formulaire ci-dessous et nous vous répondrons rapidement
               </p>
             </div>
 
-            <div className="card-3d">
-        <ContactForm />
-      </div>
+            <div className="card-3d p-4 sm:p-6 md:p-8">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Final 3D */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-20"></div>
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-6">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
             Une Question ? Un Projet ?
           </h2>
-          <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 opacity-90 max-w-3xl mx-auto px-4">
             Notre équipe d&apos;experts est prête à vous accompagner dans tous vos projets énergétiques
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 flex items-center space-x-3">
-              <Phone className="w-6 h-6" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 flex items-center justify-center space-x-2 sm:space-x-3 w-full sm:w-auto">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
               <span>Appel Gratuit</span>
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
-              <Send className="w-6 h-6" />
+            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2 w-full sm:w-auto">
+              <Send className="w-5 h-5 sm:w-6 sm:h-6" />
               <span>Email Express</span>
             </button>
           </div>

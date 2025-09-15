@@ -1,5 +1,5 @@
 "use client";
-import { Truck, MapPin, Shield, Clock, ArrowRight } from "lucide-react";
+import { Truck, MapPin, Shield, Clock, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";

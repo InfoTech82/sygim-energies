@@ -1,5 +1,5 @@
 "use client";
-import { ShoppingCart, Fuel, Truck, Car, CreditCard, CheckCircle, ArrowRight, Phone, Gauge } from "lucide-react";
+import { ShoppingCart, Fuel, Truck, Car, CreditCard, CheckCircle, ArrowRight, Phone, Gauge, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";

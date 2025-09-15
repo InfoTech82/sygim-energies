@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, ArrowRight, Sparkles } from "lucide-react";
 import ContactForm from "@/components/site/ContactForm";
 
 export default function ContactPage() {

@@ -364,4 +364,70 @@
       @apply px-6 py-3 text-sm;
     }
   }
+
+  /* MOBILE-FIRST RESPONSIVE UTILITIES */
+  .mobile-padding {
+    @apply px-4 sm:px-6;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+
+  .mobile-title {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  .mobile-subtitle {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .mobile-button {
+    @apply px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base;
+  }
+
+  .mobile-grid {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+
+  .mobile-spacing {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+
+  /* TOUCH-FRIENDLY INTERACTIONS */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* MOBILE NAVIGATION */
+  .mobile-nav {
+    @apply fixed inset-0 z-50 bg-white/95 backdrop-blur-xl;
+  }
+
+  /* MOBILE CARDS */
+  .mobile-card {
+    @apply p-4 sm:p-6 rounded-2xl shadow-lg;
+  }
+
+  /* MOBILE TYPOGRAPHY */
+  .mobile-heading {
+    @apply text-xl sm:text-2xl md:text-3xl font-bold;
+  }
+
+  .mobile-body {
+    @apply text-sm sm:text-base leading-relaxed;
+  }
+
+  /* MOBILE BUTTONS */
+  .mobile-btn {
+    @apply w-full sm:w-auto px-6 py-3 text-base font-semibold rounded-xl;
+  }
+
+  .mobile-btn-primary {
+    @apply bg-green-600 text-white hover:bg-green-700;
+  }
+
+  .mobile-btn-secondary {
+    @apply border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white;
+  }
 }

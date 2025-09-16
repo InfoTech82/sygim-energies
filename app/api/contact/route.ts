@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialiser Resend seulement si la clé API est présente
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
   try {
@@ -50,23 +51,37 @@ export async function POST(request: Request) {
     `;
 
     // Envoi de l'email avec Resend
-    if (process.env.RESEND_API_KEY) {
-      await resend.emails.send({
-        from: 'SYGIM ENERGIES <noreply@sygim-energies.com>',
-        to: [process.env.MAIL_TO || 'informatiquetechno03@gmail.com'],
-        subject: `Nouveau message de contact - ${serviceType || 'Général'}`,
-        html: emailContent,
-      });
+    if (resend && process.env.RESEND_API_KEY) {
+      try {
+        await resend.emails.send({
+          from: 'SYGIM ENERGIES <noreply@sygim-energies.com>',
+          to: [process.env.MAIL_TO || 'informatiquetechno03@gmail.com'],
+          subject: `Nouveau message de contact - ${serviceType || 'Général'}`,
+          html: emailContent,
+        });
+        console.log('✅ Email envoyé via Resend');
+      } catch (emailError) {
+        console.error('❌ Erreur Resend:', emailError);
+        // Fallback vers logging en cas d'erreur Resend
+        console.log('=== NOUVEAU MESSAGE DE CONTACT (Fallback) ===');
+        console.log(`Nom: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Téléphone: ${phone || 'Non fourni'}`);
+        console.log(`Service: ${serviceType || 'Général'}`);
+        console.log(`Quantité: ${quantity || 'Non spécifiée'}`);
+        console.log(`Message: ${message || 'Aucun message'}`);
+        console.log('==========================================');
+      }
     } else {
       // Fallback: logging si pas de clé API
-      console.log('=== NOUVEAU MESSAGE DE CONTACT ===');
+      console.log('=== NOUVEAU MESSAGE DE CONTACT (Mode Développement) ===');
       console.log(`Nom: ${name}`);
       console.log(`Email: ${email}`);
       console.log(`Téléphone: ${phone || 'Non fourni'}`);
       console.log(`Service: ${serviceType || 'Général'}`);
       console.log(`Quantité: ${quantity || 'Non spécifiée'}`);
       console.log(`Message: ${message || 'Aucun message'}`);
-      console.log('================================');
+      console.log('=====================================================');
     }
 
     return NextResponse.json({ 

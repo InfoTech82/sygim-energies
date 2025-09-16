@@ -32,15 +32,29 @@ export default function Hero() {
     <section className="hero-modern min-h-screen flex items-center justify-center pt-20 sm:pt-24 relative overflow-hidden">
       {/* Background Elements - Design Moderne */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-4 sm:right-10 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute -bottom-8 left-8 sm:left-20 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
+        {/* Logo en arrière-plan - Très visible */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] md:w-[1000px] md:h-[1000px] lg:w-[1200px] lg:h-[1200px] opacity-10 animate-pulse">
+            <Image
+              src="/images/logo.png"
+              alt="SYGIM ENERGIES Logo Background"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Éléments décoratifs */}
+        <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse"></div>
+        <div className="absolute top-40 right-4 sm:right-10 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute -bottom-8 left-8 sm:left-20 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{animationDelay: '4s'}}></div>
         
         {/* Floating Elements */}
         {floatingElements.map((element) => (
           <div
             key={element.id}
-            className="absolute w-1 sm:w-2 h-1 sm:h-2 bg-green-400 rounded-full opacity-30 animate-pulse"
+            className="absolute w-1 sm:w-2 h-1 sm:h-2 bg-green-400 rounded-full opacity-20 animate-pulse"
             style={{
               left: `${element.x}%`,
               top: `${element.y}%`,
@@ -59,7 +73,7 @@ export default function Hero() {
           <div className="mb-8 sm:mb-12 md:mb-16 animate-fade-in">
             <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 mx-auto mb-4 sm:mb-6 rounded-2xl overflow-hidden shadow-modern-lg">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="SYGIM ENERGIES Logo"
                 fill
                 className="object-contain p-2 sm:p-4"

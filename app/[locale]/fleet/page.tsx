@@ -153,7 +153,7 @@ export default function FleetPage() {
               <span className="text-gray-800">Service</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Un réseau de stations modernes à travers Abidjan
+              Un réseau de stations modernes à travers le Mali et les régions
             </p>
           </div>
 
@@ -176,8 +176,231 @@ export default function FleetPage() {
                   ))}
                 </div>
               </div>
-        ))}
-      </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie des Stations - Design Moderne */}
+      <section className="section-modern bg-gradient-to-br from-green-50 to-gray-50 py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+              <span className="text-gradient-3d">Galerie</span>{" "}
+              <span className="text-gray-800">de nos Stations</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              Découvrez nos stations modernes et nos installations de pointe
+            </p>
+          </div>
+
+          {/* Grille d'images des stations */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* Station 1 - Bamako */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.1s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">🏪</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Station Bamako - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-bamako.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Bamako</h3>
+                <p className="text-green-600 font-semibold text-center">Mali - Centre</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Vente GASOIL Premium</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Service 24/7</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Paiement mobile</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Station 2 - Abidjan */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.2s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">⛽</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Station Abidjan - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-abidjan.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Abidjan</h3>
+                <p className="text-green-600 font-semibold text-center">Côte d&apos;Ivoire - Port</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Import/Export</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Stockage 50,000L</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Laboratoire qualité</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Station 3 - Station Mobile */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.3s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">🚛</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Station Mobile - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-mobile.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Mobile</h3>
+                <p className="text-green-600 font-semibold text-center">Service sur site</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Livraison directe</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Capacité 20,000L</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Service express</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Station 4 - Centre de Distribution */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.4s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">🏭</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Centre Distribution - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/centre-distribution.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Centre de Distribution</h3>
+                <p className="text-green-600 font-semibold text-center">Bamako - Hub principal</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Stockage 100,000L</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Contrôle qualité</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Formation équipes</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Station 5 - Station Rurale */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.5s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">🌾</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Station Rurale - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-rurale.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Rurale</h3>
+                <p className="text-green-600 font-semibold text-center">Zones reculées</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Service communautaire</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Prix préférentiels</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Développement local</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Station 6 - Station Internationale */}
+            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.6s'}}>
+              <div className="mb-6">
+                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                  <div className="text-center">
+                    <div className="text-4xl sm:text-5xl mb-2">🌍</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Station Internationale - Image à venir</div>
+                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-internationale.jpg</div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Internationale</h3>
+                <p className="text-green-600 font-semibold text-center">Expansion future</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Standards internationaux</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Technologie avancée</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Partenariats mondiaux</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Instructions pour les images */}
+          <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl border border-green-200">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">
+              📸 Instructions pour ajouter les images
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-2">📁 Structure des dossiers :</h4>
+                <div className="bg-gray-100 p-3 rounded-lg text-sm font-mono">
+                  public/images/stations/<br/>
+                  ├── station-bamako.jpg<br/>
+                  ├── station-abidjan.jpg<br/>
+                  ├── station-mobile.jpg<br/>
+                  ├── centre-distribution.jpg<br/>
+                  ├── station-rurale.jpg<br/>
+                  └── station-internationale.jpg
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-2">📏 Recommandations :</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Format : JPG ou PNG</li>
+                  <li>• Taille : 800x600px minimum</li>
+                  <li>• Poids : < 500KB par image</li>
+                  <li>• Qualité : Haute résolution</li>
+                  <li>• Orientation : Paysage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

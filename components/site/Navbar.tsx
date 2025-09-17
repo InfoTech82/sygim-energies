@@ -18,6 +18,7 @@ export default function Navbar() {
     { href: "/about", label: t('about'), icon: <Zap className="w-4 h-4" /> },
     { href: "/services", label: t('services'), icon: <Zap className="w-4 h-4" /> },
     { href: "/fleet", label: t('fleet'), icon: <Zap className="w-4 h-4" /> },
+    { href: "/partners", label: t('partners'), icon: <Zap className="w-4 h-4" /> },
     { href: "/order", label: t('order'), icon: <Zap className="w-4 h-4" /> },
     { href: "/contact", label: t('contact'), icon: <Zap className="w-4 h-4" /> },
   ];

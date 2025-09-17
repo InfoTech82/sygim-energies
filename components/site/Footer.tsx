@@ -3,25 +3,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { Zap, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Star, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Zap, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Star, Sparkles, Handshake } from "lucide-react";
 
 export default function Footer() {
   const pathname = usePathname();
   const base = useMemo(() => `/${pathname?.split("/")[1] || "fr"}`, [pathname]);
+  const t = useTranslations('navbar');
 
   const quickLinks = [
-    { href: "/", label: "Accueil", icon: <Zap className="w-4 h-4" /> },
-    { href: "/about", label: "À propos", icon: <Star className="w-4 h-4" /> },
-    { href: "/services", label: "Services", icon: <Sparkles className="w-4 h-4" /> },
-    { href: "/fleet", label: "Flotte & Stations", icon: <Zap className="w-4 h-4" /> },
-    { href: "/order", label: "Commander", icon: <ArrowRight className="w-4 h-4" /> },
-    { href: "/contact", label: "Contact", icon: <Phone className="w-4 h-4" /> },
+    { href: "/", label: t('home'), icon: <Zap className="w-4 h-4" /> },
+    { href: "/about", label: t('about'), icon: <Star className="w-4 h-4" /> },
+    { href: "/services", label: t('services'), icon: <Sparkles className="w-4 h-4" /> },
+    { href: "/fleet", label: t('fleet'), icon: <Zap className="w-4 h-4" /> },
+    { href: "/partners", label: t('partners'), icon: <Handshake className="w-4 h-4" /> },
+    { href: "/order", label: t('order'), icon: <ArrowRight className="w-4 h-4" /> },
+    { href: "/contact", label: t('contact'), icon: <Phone className="w-4 h-4" /> },
   ];
 
   const services = [
     "GASOIL Premium",
     "SUPER Sans Plomb",
-    "Huiles Moteur", 
+    "Huiles Moteur RYMAX (Rep. Officiel)", 
+    "Graisses & Lubrifiants",
     "Transport Pétrolier",
     "Location Véhicules",
     "Service Bilingue 24/7"
@@ -150,7 +154,7 @@ export default function Footer() {
             </div>
             
             <div className="text-gray-400 text-center md:text-right">
-              <p className="text-lg font-semibold">&copy; 2024 SYGIM ENERGIES SAS. Tous droits réservés.</p>
+              <p className="text-lg font-semibold">&copy; 2025 SYGIM ENERGIES SAS. Tous droits réservés.</p>
               <p className="mt-2 text-sm">Leader du Transport Pétrolier • Service Bilingue International</p>
             </div>
         </div>

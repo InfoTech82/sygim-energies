@@ -1,8 +1,49 @@
 "use client";
 import { Truck, MapPin, Shield, Clock, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+
+// Composant pour afficher les images des stations avec fallback
+const StationImage = ({ 
+  src, 
+  alt, 
+  fallbackEmoji, 
+  className = "" 
+}: { 
+  src: string; 
+  alt: string; 
+  fallbackEmoji: string; 
+  className?: string; 
+}) => {
+  const [imageError, setImageError] = useState(false);
+  
+  if (imageError) {
+    return (
+      <div className={`${className} flex items-center justify-center`}>
+        <div className="text-center">
+          <div className="text-5xl sm:text-6xl lg:text-7xl mb-3">{fallbackEmoji}</div>
+          <div className="text-sm sm:text-base text-gray-600 font-medium">{alt}</div>
+          <div className="text-xs text-gray-400 mt-1">Image à venir</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${className} relative`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover rounded-2xl"
+        onError={() => setImageError(true)}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+    </div>
+  );
+};
 
 export default function FleetPage() {
   const pathname = usePathname();
@@ -20,34 +61,34 @@ export default function FleetPage() {
       type: "Camions Citernes",
       capacity: "20,000L",
       features: ["GPS Tracking", "Sécurité renforcée", "Maintenance préventive"],
-      image: "/images/fleet/camion-citerne.jpg", // Placez votre image ici
+      image: "/images/fleet/camion1.jpg", // Placez votre image ici
       fallbackEmoji: "🚛"
     },
-    {
-      type: "Véhicules Légers",
-      capacity: "5 places",
-      features: ["Confort premium", "Économie de carburant", "Assurance incluse"],
-      image: "/images/fleet/vehicule-leger.jpg", // Placez votre image ici
-      fallbackEmoji: "🚗"
-    },
-    {
-      type: "Utilitaires",
-      capacity: "3,5T",
-      features: ["Polyvalence", "Robustesse", "Facilité d&apos;utilisation"],
-      image: "/images/fleet/utilitaire.jpg", // Placez votre image ici
-      fallbackEmoji: "🚐"
-    },
+    // {
+    //   type: "Véhicules Légers",
+    //   capacity: "5 places",
+    //   features: ["Confort premium", "Économie de carburant", "Assurance incluse"],
+    //   image: "/images/fleet/vehicule-leger.jpg", // Placez votre image ici
+    //   fallbackEmoji: "🚗"
+    // },
+    // {
+    //   type: "Utilitaires",
+    //   capacity: "3,5T",
+    //   features: ["Polyvalence", "Robustesse", "Facilité d&apos;utilisation"],
+    //   image: "/images/fleet/utilitaire.jpg", // Placez votre image ici
+    //   fallbackEmoji: "🚐"
+    // },
     {
       type: "Véhicules Spécialisés",
       capacity: "Sur mesure",
       features: ["Équipements spéciaux", "Formation incluse", "Support technique"],
-      image: "/images/fleet/vehicule-specialise.jpg", // Placez votre image ici
+      image: "/images/fleet/camion1.jpg", // Placez votre image ici
       fallbackEmoji: "🏗️"
     },
   ];
 
   const stations = [
-    { name: "Stations Côte d&apos;Ivoire", location: "Abidjan & Intérieur", services: ["Vente gros/détail", "GASOIL Premium", "SUPER"] },
+    { name: "Stations Régionales", location: "Mali", services: ["Vente gros/détail", "GASOIL Premium", "SUPER"] },
     { name: "Stations Bamako", location: "Mali", services: ["Expansion internationale", "Produits pétroliers", "Service local"] },
     { name: "Réseau Mondial", location: "Vision Internationale", services: ["Développement global", "Partenariats", "Croissance"] },
   ];
@@ -113,11 +154,13 @@ export default function FleetPage() {
               <div key={vehicle.type} className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: `${index * 0.1}s`}}>
                 {/* Image du véhicule */}
                 <div className="mb-6 sm:mb-8">
-                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl sm:text-5xl md:text-6xl mb-2">{vehicle.fallbackEmoji}</div>
-                      <div className="text-xs sm:text-sm text-gray-500">Image à venir</div>
-                    </div>
+                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 overflow-hidden relative">
+                    <StationImage
+                      src={vehicle.image}
+                      alt={vehicle.type}
+                      fallbackEmoji={vehicle.fallbackEmoji}
+                      className="h-full w-full"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 group-hover:text-gradient-modern transition-all duration-300 text-center">
                     {vehicle.type}
@@ -194,185 +237,196 @@ export default function FleetPage() {
             </p>
           </div>
 
-          {/* Grille d'images des stations */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Station 1 - Bamako */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.1s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">🏪</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Station Bamako - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-bamako.jpg</div>
+          {/* Grille d'images des stations - Design amélioré */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {/* Station 1 - Bamako-Boulkasoumbougou */}
+            <div className="card-modern card-3d group animate-slide-up hover:scale-105 transition-all duration-300 overflow-hidden" style={{animationDelay: '0.1s'}}>
+              <div className="relative">
+                <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-green-100 via-green-50 to-emerald-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <StationImage
+                    src="/images/fleet/station1.jpg"
+                    alt="Station Bamako - SYGIM ENERGIES"
+                    fallbackEmoji="🏪"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300">Station Boulkasoumbougou</h3>
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Bamako</h3>
-                <p className="text-green-600 font-semibold text-center">Mali - Centre</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Vente GASOIL Premium</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Service 24/7</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Paiement mobile</span>
+                  <p className="text-green-600 font-semibold text-lg mb-4">Mali - Boulkasoumbougou</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Station 2 - Abidjan */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.2s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">⛽</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Station Abidjan - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-abidjan.jpg</div>
+            {/* Station 2 - DIO */}
+            <div className="card-modern card-3d group animate-slide-up hover:scale-105 transition-all duration-300 overflow-hidden" style={{animationDelay: '0.2s'}}>
+              <div className="relative">
+                <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-blue-100 via-blue-50 to-cyan-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <StationImage
+                    src="/images/fleet/station2.jpg"
+                    alt="Station Abidjan - SYGIM ENERGIES"
+                    fallbackEmoji="⛽"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Station DIO</h3>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Abidjan</h3>
-                <p className="text-green-600 font-semibold text-center">Côte d&apos;Ivoire - Port</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Import/Export</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Stockage 50,000L</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Laboratoire qualité</span>
+                  <p className="text-blue-600 font-semibold text-lg mb-4">Mali - DIO</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Station 3 - Station Mobile */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.3s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">🚛</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Station Mobile - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-mobile.jpg</div>
+            {/* Station 3 - Station Sotuba */}
+            <div className="card-modern card-3d group animate-slide-up hover:scale-105 transition-all duration-300 overflow-hidden" style={{animationDelay: '0.3s'}}>
+              <div className="relative">
+                <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-orange-100 via-orange-50 to-amber-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <StationImage
+                    src="/images/fleet/station3.jpg"
+                    alt="Station Sotuba - SYGIM ENERGIES"
+                    fallbackEmoji="🚛"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">Station Sotuba</h3>
+                    <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Mobile</h3>
-                <p className="text-green-600 font-semibold text-center">Service sur site</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Livraison directe</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Capacité 20,000L</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Service express</span>
+                  <p className="text-orange-600 font-semibold text-lg mb-4">Mali - Sotuba</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Station 4 - Centre de Distribution */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.4s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">🏭</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Centre Distribution - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/centre-distribution.jpg</div>
+            {/* Station 4 - Mahinamine (Kéniéba) */}
+            <div className="card-modern card-3d group animate-slide-up hover:scale-105 transition-all duration-300 overflow-hidden" style={{animationDelay: '0.4s'}}>
+              <div className="relative">
+                <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-purple-100 via-purple-50 to-violet-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <StationImage
+                    src="/images/fleet/station4.jpg"
+                    alt="Mahinamine (Kéniéba) - SYGIM ENERGIES"
+                    fallbackEmoji="🏭"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors duration-300">Mahinamine (Kéniéba)</h3>
+                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Centre de Distribution</h3>
-                <p className="text-green-600 font-semibold text-center">Bamako - Hub principal</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Stockage 100,000L</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Contrôle qualité</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Formation équipes</span>
+                  <p className="text-purple-600 font-semibold text-lg mb-4">Mali - Mahinamine (Kéniéba)</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Station 5 - Station Rurale */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.5s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">🌾</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Station Rurale - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-rurale.jpg</div>
+            {/* Station 5 - Diboli */}
+            <div className="card-modern card-3d group animate-slide-up hover:scale-105 transition-all duration-300 overflow-hidden" style={{animationDelay: '0.5s'}}>
+              <div className="relative">
+                <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-emerald-100 via-emerald-50 to-teal-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <StationImage
+                    src="/images/fleet/station5.jpg"
+                    alt="Station Diboli - SYGIM ENERGIES"
+                    fallbackEmoji="🌾"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-emerald-600 transition-colors duration-300">Station Diboli</h3>
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Rurale</h3>
-                <p className="text-green-600 font-semibold text-center">Zones reculées</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Service communautaire</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Prix préférentiels</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Développement local</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Station 6 - Station Internationale */}
-            <div className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: '0.6s'}}>
-              <div className="mb-6">
-                <div className="h-48 sm:h-56 mb-4 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl mb-2">🌍</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Station Internationale - Image à venir</div>
-                    <div className="text-xs text-gray-400 mt-1">/images/stations/station-internationale.jpg</div>
+                  <p className="text-emerald-600 font-semibold text-lg mb-4">Mali - Diboli</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
+                    </div>
+                    <div className="flex items-center space-x-3 group/item">
+                      <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
+                      <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 text-center">Station Internationale</h3>
-                <p className="text-green-600 font-semibold text-center">Expansion future</p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Standards internationaux</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Technologie avancée</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Partenariats mondiaux</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Instructions pour les images */}
-          <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl border border-green-200">
+          {/* <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl border border-green-200">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">
               📸 Instructions pour ajouter les images
             </h3>
@@ -394,13 +448,13 @@ export default function FleetPage() {
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Format : JPG ou PNG</li>
                   <li>• Taille : 800x600px minimum</li>
-                  <li>• Poids : < 500KB par image</li>
+                  <li>• Poids :  500KB par image</li>
                   <li>• Qualité : Haute résolution</li>
                   <li>• Orientation : Paysage</li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -436,3 +490,4 @@ export default function FleetPage() {
     </div>
   );
 }
+

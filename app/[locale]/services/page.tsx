@@ -108,6 +108,78 @@ const services = [
         </div>
       </section>
 
+      {/* Produits RYMAX TDS-Endurox - Design Moderne */}
+      <section className="section-modern bg-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+              <span className="text-gradient-3d">Produits</span>{" "}
+              <span className="text-gray-800">RYMAX TDS-Endurox</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              Représentant officiel de la marque RYMAX TDS-Endurox, répondant à notre niveau d'exigence en termes de qualité
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="card-modern card-3d animate-slide-up p-6 sm:p-8 mb-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white shadow-modern">
+                  <Fuel className="w-8 h-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-800">Représentation Officielle RYMAX TDS-Endurox</h3>
+                  <p className="text-blue-600 font-semibold text-lg">Représentant Exclusif • Qualité Garantie • Standards Internationaux</p>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-8">
+                SYGIM ENERGIES SAS est fière d'être <strong>représentant officiel</strong> de la marque <strong>RYMAX TDS-Endurox</strong>, 
+                une marque qui répond parfaitement à notre niveau d'exigence en termes de qualité et de performance.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Huiles Moteurs</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Graisses</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Huiles Hydrauliques</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Liquide de Refroidissement</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Huiles de Transmission</span>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-semibold text-gray-700">Gamme Complète</span>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200">
+                <div className="flex items-center space-x-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                  <h4 className="text-lg font-bold text-gray-800">Pourquoi RYMAX TDS-Endurox ?</h4>
+                </div>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  En tant que représentant officiel, nous garantissons l'authenticité et la qualité de tous les produits RYMAX TDS-Endurox, 
+                  offrant des lubrifiants et fluides de haute performance pour tous vos besoins.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Avantages - Design Moderne */}
       <section className="section-modern bg-gradient-to-br from-green-50 to-gray-50">
         <div className="container mx-auto px-6">

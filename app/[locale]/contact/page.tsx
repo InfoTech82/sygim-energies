@@ -173,9 +173,9 @@ export default function ContactPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 animate-fade-in">
-            <button className="bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl transition-all duration-300 shadow-modern hover:shadow-modern-lg flex items-center justify-center space-x-3 sm:space-x-4 group w-full sm:w-auto callto:+22382721469">
+            <button className="bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl transition-all duration-300 shadow-modern hover:shadow-modern-lg flex items-center justify-center space-x-3 sm:space-x-4 group w-full sm:w-auto callto:+22344906692">
               <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span>Appel Gratuit</span>
+              <span className="callto:+22344906692">Appel Gratuit</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             

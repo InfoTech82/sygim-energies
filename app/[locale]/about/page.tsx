@@ -3,6 +3,7 @@ import { Building2, Target, Sparkles, Award, ArrowRight, ChevronRight, Star, Zap
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+import TeamCarousel from "@/components/site/TeamCarousel";
 
 export default function AboutPage() {
   const pathname = usePathname();
@@ -71,6 +72,168 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Clients Miniers & Garage - Design Moderne */}
+      <section className="section-modern bg-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+              <span className="text-gradient-3d">Nos Clients</span>{" "}
+              <span className="text-gray-800">Miniers</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              En partenariat avec Vivo Energy, nous servons les plus grandes mines du Mali
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 max-w-7xl mx-auto">
+            {/* Mines Servies */}
+            <div className="card-modern card-3d animate-slide-up p-6 sm:p-8">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
+                <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Mines Servies</h3>
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-6">
+                En partenariat avec <strong>Vivo Energy</strong>, SYGIM ENERGIES dessert les plus importantes mines du Mali :
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Goungoto</span>
+                </div>
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Loulo</span>
+                </div>
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Tabakoto</span>
+                </div>
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Nampala</span>
+                </div>
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">KOMANA</span>
+                </div>
+                <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Yanfolila</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-4 italic">
+                Région de Sikasso • Service fiable et professionnel
+              </p>
+            </div>
+
+            {/* Garage Moderne */}
+            <div className="card-modern card-3d animate-slide-up p-6 sm:p-8">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Garage Moderne</h3>
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-6">
+                SYGIM ENERGIES possède un <strong>garage moderne</strong> pour l'entretien de sa flotte avec une équipe expérimentée et dynamique.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Équipements modernes</span>
+                </div>
+                <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Équipe expérimentée</span>
+                </div>
+                <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Maintenance préventive</span>
+                </div>
+                <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-semibold text-gray-700">Service 24/7</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-4 italic">
+                Garantie de fiabilité et de performance pour tous nos véhicules
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients de Confiance - Design Moderne */}
+      <section className="section-modern bg-gradient-to-br from-blue-50 to-indigo-50 py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
+              <span className="text-gradient-3d">Ils nous font</span>{" "}
+              <span className="text-gray-800">confiance</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              Une diversité de clients qui témoigne de notre polyvalence et de notre expertise
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.1s'}}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
+                <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-blue-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Transporteurs</h3>
+              <p className="text-xs text-gray-600">Professionnels du transport</p>
+            </div>
+
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
+                <Zap className="w-6 h-6 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-green-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Agriculteurs</h3>
+              <p className="text-xs text-gray-600">Secteur agricole</p>
+            </div>
+
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.3s'}}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
+                <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-orange-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">BTP</h3>
+              <p className="text-xs text-gray-600">Bâtiment et Travaux Publics</p>
+            </div>
+
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
+                <Star className="w-6 h-6 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-purple-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Collectivités</h3>
+              <p className="text-xs text-gray-600">Administrations publiques</p>
+            </div>
+
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.5s'}}>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
+                <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-sm sm:text-base font-bold text-pink-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Particuliers</h3>
+              <p className="text-xs text-gray-600">Clients individuels</p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="card-modern card-3d animate-fade-in p-6 sm:p-8 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">
+                🏆 Une confiance méritée
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                Cette diversité de clients - <strong>Transporteurs, Agriculteurs, BTP, Collectivités, Particuliers</strong> - 
+                témoigne de notre capacité à répondre aux besoins spécifiques de chaque secteur d'activité. 
+                SYGIM ENERGIES SAS s'adapte et excelle dans tous les domaines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Équipe - Carrousel Moderne */}
+      <TeamCarousel />
 
       {/* Parcours - Design Moderne */}
       <section className="section-modern bg-gradient-to-br from-green-50 to-gray-50 py-12 sm:py-16">

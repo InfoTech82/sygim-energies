@@ -1,6 +1,12 @@
 # 📸 Images des Stations SYGIM ENERGIES
 
-## Instructions pour ajouter les images
+## ✅ Système d'images mis à jour !
+
+Le système d'images a été amélioré avec :
+- **Chargement optimisé** avec Next.js Image
+- **Fallback automatique** vers les emojis si l'image n'existe pas
+- **Responsive design** adaptatif
+- **Gestion d'erreurs** intelligente
 
 ### 📁 Structure des fichiers
 Placez vos images dans ce dossier avec les noms suivants :

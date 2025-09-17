@@ -10,12 +10,12 @@ export default function OrderPage() {
 
   const orderTypes = [
     {
-      title: "Commande de Carburant 3D",
+      title: "Commande de Carburant",
       description: "Livraison rapide de carburant premium avec suivi en temps réel",
       icon: <Fuel className="w-12 h-12" />,
       color: "from-blue-500 to-cyan-500",
       price: "À partir de 500L",
-      features: ["Livraison 24/7", "Qualité garantie", "Prix compétitifs", "Suivi GPS 3D"]
+      features: ["Livraison 24/7", "Qualité garantie", "Prix compétitifs"]
     },
     {
       title: "Transport Pétrolier Express",
@@ -23,7 +23,7 @@ export default function OrderPage() {
       icon: <Truck className="w-12 h-12" />,
       color: "from-green-500 to-emerald-500",
       price: "Devis personnalisé",
-      features: ["Sécurité maximale", "Assurance complète", "Équipe experte", "Tracking 3D"]
+      features: ["Sécurité maximale", "Assurance complète", "Équipe experte"]
     },
     {
       title: "Location de Véhicules Premium",
@@ -159,7 +159,7 @@ export default function OrderPage() {
                 <Phone className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6" />
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Commande Téléphonique</h3>
                 <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6 text-gray-600">Appelez-nous directement pour une commande express</p>
-                <div className="text-xl sm:text-2xl font-bold text-green-600">+223 77 17 60 60</div>
+                <div className="callto:+22344906692 text-xl sm:text-2xl font-bold text-green-600">+223 44 90 66 92</div>
               </div>
 
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 hover:bg-white/20 transition-all duration-300 card-modern">

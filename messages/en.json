@@ -22,7 +22,234 @@
     "super": "Unleaded GASOLINE",
     "oil": "Motor Oils",
     "transport": "Specialized Transport"
+  },
+  "hero": {
+    "title": "SYGIM ENERGIES SAS",
+    "subtitle": "Petroleum Transport Leader",
+    "description": "Petroleum products marketing (DIESEL, GASOLINE, OIL) and specialized transport with a fleet of over 200 articulated vehicles. Your trusted partner.",
+    "cta1": "Discover our services",
+    "cta2": "Order now"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete solutions for your energy needs",
+    "petroleumMarketing": {
+      "title": "Petroleum Products Marketing",
+      "description": "Wholesale and retail sales of DIESEL, GASOLINE, OIL and other premium quality petroleum products.",
+      "features": ["Premium DIESEL", "Unleaded GASOLINE", "Motor oils", "Wholesale/retail delivery"]
+    },
+    "transport": {
+      "title": "Petroleum Products Transport",
+      "description": "Specialized transport service with a fleet of over 200 modern articulated vehicles.",
+      "features": ["200+ articulated vehicles", "Dynamic team", "Maximum security", "On-time delivery"]
+    },
+    "rental": {
+      "title": "Petroleum Vehicle Rental",
+      "description": "Rental of specialized vehicles for petroleum products transport with maintenance included.",
+      "features": ["Modern fleet", "Preventive maintenance", "Driver training", "24/7 technical support"]
+    }
+  },
+  "fleet": {
+    "title": "Our Fleet",
+    "subtitle": "200+ Vehicles Ready to Serve",
+    "description": "SYGIM ENERGIES SAS has a substantial fleet of over 200 articulated vehicles always ready to serve and honor commitments with the best service.",
+    "stats": {
+      "vehicles": "200+",
+      "vehiclesLabel": "Articulated Vehicles",
+      "stations": "Bamako+",
+      "stationsLabel": "International Stations",
+      "leader": "Leader",
+      "leaderLabel": "Of The Market",
+      "capital": "10M",
+      "capitalLabel": "Capital FCFA"
+    },
+    "vehicles": {
+      "title": "Our Vehicle Fleet",
+      "subtitle": "Modern and reliable vehicles for all your needs",
+      "tankers": {
+        "title": "Tank Trucks",
+        "capacity": "20,000L",
+        "features": ["GPS Tracking", "Enhanced security", "Preventive maintenance"]
+      },
+      "specialized": {
+        "title": "Specialized Vehicles",
+        "capacity": "Custom",
+        "features": ["Special equipment", "Training included", "Technical support"]
+      }
+    },
+    "stations": {
+      "title": "Our Service Stations",
+      "subtitle": "A network of modern stations across Mali and regions",
+      "regional": {
+        "title": "Regional Stations",
+        "location": "Mali",
+        "services": ["Wholesale/retail sales", "Premium DIESEL", "SUPER"]
+      },
+      "bamako": {
+        "title": "Bamako Stations",
+        "location": "Mali",
+        "services": ["International expansion", "Petroleum products", "Local service"]
+      },
+      "global": {
+        "title": "Global Network",
+        "location": "International Vision",
+        "services": ["Global development", "Partnerships", "Growth"]
+      }
+    },
+    "gallery": {
+      "title": "Gallery of our Stations",
+      "subtitle": "Discover our modern stations and state-of-the-art facilities"
+    }
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Trusted partners for quality energy solutions",
+    "description": "SYGIM ENERGIES SAS relies on a network of trusted partners to offer quality energy solutions and excellent service.",
+    "referencePartners": {
+      "title": "Our Reference Partners",
+      "subtitle": "Industry leaders sharing our values of excellence and innovation"
+    },
+    "benefits": {
+      "title": "Partnership Benefits",
+      "subtitle": "The advantages of partnering with SYGIM ENERGIES SAS",
+      "network": {
+        "title": "Established Network",
+        "description": "Over 15 years of experience in the energy sector with an established trust network"
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Rigorous quality control and compliance with international standards"
+      },
+      "support": {
+        "title": "Technical Support",
+        "description": "24/7 technical support and training for our partners"
+      }
+    }
+  },
+  "about": {
+    "title": "About SYGIM ENERGIES SAS",
+    "subtitle": "Your trusted partner in petroleum transport",
+    "description": "SYGIM ENERGIES SAS is a leading company in petroleum products marketing and specialized transport in Mali and West Africa.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Provide quality petroleum products and reliable transport services to meet the energy needs of our customers."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Become the reference partner for energy solutions in West Africa through innovation and excellence."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality",
+      "safety": "Safety",
+      "reliability": "Reliability",
+      "innovation": "Innovation"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "The professionals who make SYGIM ENERGIES strong"
+    },
+    "clients": {
+      "title": "Our Trusted Clients",
+      "subtitle": "SYGIM ENERGIES SAS is proud to count among its clients professionals from all sectors of activity, demonstrating our versatility and reliability.",
+      "types": {
+        "transporters": "Transporters",
+        "farmers": "Farmers",
+        "construction": "Construction",
+        "communities": "Communities",
+        "individuals": "Individuals"
+      },
+      "stats": {
+        "satisfaction": "100% Satisfaction",
+        "quality": "5★ Quality",
+        "experience": "15+ Years Experience"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer all your questions",
+    "mainContact": {
+      "title": "Main Contact",
+      "name": "BOUBACAR TRAORE",
+      "position": "QHSE - Quality Safety Environment Manager"
+    },
+    "email": {
+      "title": "Main Email",
+      "value": "boubatraore@sygim.net",
+      "description": "Direct contact for all your needs"
+    },
+    "headquarters": {
+      "title": "Headquarters",
+      "value": "Bamako, Mali",
+      "description": "Distribution center and stations"
+    },
+    "service": {
+      "title": "Bilingual Service",
+      "value": "French / English",
+      "description": "24/7 international customer support"
+    },
+    "methods": {
+      "immediate": {
+        "title": "Immediate Contact",
+        "description": "For emergencies and express orders",
+        "action": "Call now"
+      },
+      "form": {
+        "title": "Form",
+        "description": "For detailed requests and quotes",
+        "action": "Fill out the form"
+      },
+      "visit": {
+        "title": "Guided Tour",
+        "description": "Discover our facilities in person",
+        "action": "Schedule a visit"
+      }
+    }
+  },
+  "order": {
+    "title": "Order Now",
+    "subtitle": "Simple and fast ordering process",
+    "fuelOrder": {
+      "title": "Fuel Order",
+      "description": "Fast delivery of premium fuel with real-time tracking",
+      "price": "From 500L",
+      "features": ["24/7 delivery", "Guaranteed quality", "Competitive prices"]
+    },
+    "transport": {
+      "title": "Express Petroleum Transport",
+      "description": "Secure transport service with cutting-edge technology",
+      "price": "Custom quote",
+      "features": ["Maximum security", "Full insurance", "Expert team"]
+    },
+    "rental": {
+      "title": "Premium Vehicle Rental",
+      "description": "High-end vehicles for all your trips",
+      "price": "From 25,000 FCFA/day",
+      "features": ["Recent vehicles", "Maintenance included", "Insurance", "24/7 support"]
+    },
+    "steps": {
+      "title": "How to Order",
+      "step1": "Choose your service",
+      "step2": "Fill out the form",
+      "step3": "Receive confirmation",
+      "step4": "Track your order"
+    }
+  },
+  "footer": {
+    "description": "SYGIM ENERGIES SAS - Leader in petroleum transport in Mali and West Africa. Your trusted partner for energy solutions.",
+    "services": [
+      "Premium DIESEL",
+      "Unleaded GASOLINE",
+      "RYMAX Motor Oils (Official Rep.)",
+      "Greases & Lubricants",
+      "Petroleum Transport",
+      "Vehicle Rental",
+      "24/7 Bilingual Service"
+    ],
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
   }
 }
-
-

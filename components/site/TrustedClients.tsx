@@ -61,7 +61,7 @@ export default function TrustedClients() {
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             SYGIM ENERGIES SAS est fier de compter parmi ses clients des professionnels 
-            de tous secteurs d'activité, témoignant de notre polyvalence et de notre fiabilité.
+            de tous secteurs d&apos;activité, témoignant de notre polyvalence et de notre fiabilité.
           </p>
         </div>
 
@@ -94,12 +94,12 @@ export default function TrustedClients() {
                 Pourquoi nous font-ils confiance ?
               </h3>
               <p className="text-gray-600 text-base sm:text-lg">
-                Des chiffres qui parlent d'eux-mêmes
+                Des chiffres qui parlent d&apos;eux-mêmes
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-              {trustStats.map((stat, index) => (
+              {trustStats.map((stat) => (
                 <div key={stat.label} className="text-center group">
                   <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto`}>
                     {stat.icon}
@@ -120,8 +120,8 @@ export default function TrustedClients() {
                   🏆 Leader reconnu du transport pétrolier
                 </h4>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  Plus de 15 ans d'expérience, une flotte de 200+ véhicules, et une satisfaction client de 100%. 
-                  Tous nos clients, qu'ils soient transporteurs, agriculteurs, BTP, collectivités ou particuliers, 
+                  Plus de 15 ans d&apos;expérience, une flotte de 200+ véhicules, et une satisfaction client de 100%. 
+                  Tous nos clients, qu&apos;ils soient transporteurs, agriculteurs, BTP, collectivités ou particuliers, 
                   nous font confiance pour la qualité de nos services et la fiabilité de nos livraisons.
                 </p>
               </div>

@@ -173,8 +173,8 @@ export default function PartnersPage() {
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
-              SYGIM ENERGIES SAS s'appuie sur un réseau de partenaires de confiance 
-              pour offrir des solutions énergétiques de qualité et un service d'excellence.
+              SYGIM ENERGIES SAS s&apos;appuie sur un réseau de partenaires de confiance 
+              pour offrir des solutions énergétiques de qualité et un service d&apos;excellence.
             </p>
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function PartnersPage() {
               <span className="text-gray-800">de Référence</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Des entreprises leaders dans leurs domaines, partageant nos valeurs d'excellence et d'innovation
+              Des entreprises leaders dans leurs domaines, partageant nos valeurs d&apos;excellence et d&apos;innovation
             </p>
           </div>
 
@@ -268,7 +268,7 @@ export default function PartnersPage() {
               <span className="text-gray-800">Nous Choisir ?</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Les avantages d'un partenariat avec SYGIM ENERGIES SAS
+              Les avantages d&apos;un partenariat avec SYGIM ENERGIES SAS
             </p>
           </div>
 
@@ -279,7 +279,7 @@ export default function PartnersPage() {
               </div>
               <h4 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 text-center">Réseau Établi</h4>
               <p className="text-gray-600 text-sm sm:text-base text-center leading-relaxed">
-                Plus de 15 ans d'expérience dans le secteur énergétique avec un réseau de confiance établi
+                Plus de 15 ans d&apos;expérience dans le secteur énergétique avec un réseau de confiance établi
               </p>
             </div>
 

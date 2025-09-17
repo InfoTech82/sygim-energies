@@ -134,7 +134,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Garage Moderne</h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-6">
-                SYGIM ENERGIES possède un <strong>garage moderne</strong> pour l'entretien de sa flotte avec une équipe expérimentée et dynamique.
+                SYGIM ENERGIES possède un <strong>garage moderne</strong> pour l&apos;entretien de sa flotte avec une équipe expérimentée et dynamique.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
@@ -224,8 +224,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                 Cette diversité de clients - <strong>Transporteurs, Agriculteurs, BTP, Collectivités, Particuliers</strong> - 
-                témoigne de notre capacité à répondre aux besoins spécifiques de chaque secteur d'activité. 
-                SYGIM ENERGIES SAS s'adapte et excelle dans tous les domaines.
+                témoigne de notre capacité à répondre aux besoins spécifiques de chaque secteur d&apos;activité. 
+                SYGIM ENERGIES SAS s&apos;adapte et excelle dans tous les domaines.
               </p>
             </div>
           </div>

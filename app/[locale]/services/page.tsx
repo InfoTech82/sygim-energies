@@ -117,7 +117,7 @@ const services = [
               <span className="text-gray-800">RYMAX TDS-Endurox</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Représentant officiel de la marque RYMAX TDS-Endurox, répondant à notre niveau d'exigence en termes de qualité
+              Représentant officiel de la marque RYMAX TDS-Endurox, répondant à notre niveau d&apos;exigence en termes de qualité
             </p>
           </div>
 
@@ -134,8 +134,8 @@ const services = [
               </div>
               
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-8">
-                SYGIM ENERGIES SAS est fière d'être <strong>représentant officiel</strong> de la marque <strong>RYMAX TDS-Endurox</strong>, 
-                une marque qui répond parfaitement à notre niveau d'exigence en termes de qualité et de performance.
+                SYGIM ENERGIES SAS est fière d&apos;être <strong>représentant officiel</strong> de la marque <strong>RYMAX TDS-Endurox</strong>, 
+                une marque qui répond parfaitement à notre niveau d&apos;exigence en termes de qualité et de performance.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -171,7 +171,7 @@ const services = [
                   <h4 className="text-lg font-bold text-gray-800">Pourquoi RYMAX TDS-Endurox ?</h4>
                 </div>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  En tant que représentant officiel, nous garantissons l'authenticité et la qualité de tous les produits RYMAX TDS-Endurox, 
+                  En tant que représentant officiel, nous garantissons l&apos;authenticité et la qualité de tous les produits RYMAX TDS-Endurox, 
                   offrant des lubrifiants et fluides de haute performance pour tous vos besoins.
                 </p>
               </div>

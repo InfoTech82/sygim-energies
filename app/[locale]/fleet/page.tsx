@@ -154,13 +154,11 @@ export default function FleetPage() {
               <div key={vehicle.type} className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: `${index * 0.1}s`}}>
                 {/* Image du véhicule */}
                 <div className="mb-6 sm:mb-8">
-                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 overflow-hidden relative">
-                    <StationImage
-                      src={vehicle.image}
-                      alt={vehicle.type}
-                      fallbackEmoji={vehicle.fallbackEmoji}
-                      className="h-full w-full"
-                    />
+                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl sm:text-5xl md:text-6xl mb-2">{vehicle.fallbackEmoji}</div>
+                      <div className="text-xs sm:text-sm text-gray-500">Image à venir</div>
+                    </div>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 group-hover:text-gradient-modern transition-all duration-300 text-center">
                     {vehicle.type}

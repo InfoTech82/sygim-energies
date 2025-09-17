@@ -262,16 +262,16 @@ export default function FleetPage() {
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
-                    </div>
+                </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
-                    </div>
+              </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -299,16 +299,16 @@ export default function FleetPage() {
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
-                    </div>
+                </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
-                    </div>
+              </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -336,16 +336,16 @@ export default function FleetPage() {
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
-                    </div>
+                </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
-                    </div>
+              </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -373,16 +373,16 @@ export default function FleetPage() {
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
-                    </div>
+                </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
-                    </div>
+              </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -410,16 +410,16 @@ export default function FleetPage() {
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente GASOIL Super</span>
-                    </div>
+                </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Vente ESSENCE</span>
-                    </div>
+              </div>
                     <div className="flex items-center space-x-3 group/item">
                       <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200"></div>
                       <span className="text-sm sm:text-base text-gray-700 group-hover/item:text-gray-900 transition-colors duration-200">Service 24/7</span>
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>

@@ -82,7 +82,7 @@ export default function FleetPage() {
       type: "Véhicules Spécialisés",
       capacity: "Sur mesure",
       features: ["Équipements spéciaux", "Formation incluse", "Support technique"],
-      image: "/images/fleet/camion1.jpg", // Placez votre image ici
+      image: "/images/fleet/vehicule-specialise.jpg",
       fallbackEmoji: "🏗️"
     },
   ];
@@ -154,11 +154,13 @@ export default function FleetPage() {
               <div key={vehicle.type} className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: `${index * 0.1}s`}}>
                 {/* Image du véhicule */}
                 <div className="mb-6 sm:mb-8">
-                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl sm:text-5xl md:text-6xl mb-2">{vehicle.fallbackEmoji}</div>
-                      <div className="text-xs sm:text-sm text-gray-500">Image à venir</div>
-                    </div>
+                  <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 overflow-hidden relative">
+                    <StationImage
+                      src={vehicle.image}
+                      alt={vehicle.type}
+                      fallbackEmoji={vehicle.fallbackEmoji}
+                      className="h-full w-full"
+                    />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 group-hover:text-gradient-modern transition-all duration-300 text-center">
                     {vehicle.type}
@@ -243,7 +245,7 @@ export default function FleetPage() {
                 <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-green-100 via-green-50 to-emerald-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <StationImage
-                    src="/images/fleet/station1.jpg"
+                    src="/images/fleet/station1.JPG"
                     alt="Station Bamako - SYGIM ENERGIES"
                     fallbackEmoji="🏪"
                     className="h-full w-full"
@@ -280,7 +282,7 @@ export default function FleetPage() {
                 <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-blue-100 via-blue-50 to-cyan-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <StationImage
-                    src="/images/fleet/station2.jpg"
+                    src="/images/fleet/station2.JPG"
                     alt="Station Abidjan - SYGIM ENERGIES"
                     fallbackEmoji="⛽"
                     className="h-full w-full"
@@ -317,7 +319,7 @@ export default function FleetPage() {
                 <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-orange-100 via-orange-50 to-amber-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <StationImage
-                    src="/images/fleet/station3.jpg"
+                    src="/images/fleet/station3.JPG"
                     alt="Station Sotuba - SYGIM ENERGIES"
                     fallbackEmoji="🚛"
                     className="h-full w-full"
@@ -354,7 +356,7 @@ export default function FleetPage() {
                 <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-purple-100 via-purple-50 to-violet-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <StationImage
-                    src="/images/fleet/station4.jpg"
+                    src="/images/fleet/station4.JPG"
                     alt="Mahinamine (Kéniéba) - SYGIM ENERGIES"
                     fallbackEmoji="🏭"
                     className="h-full w-full"
@@ -391,7 +393,7 @@ export default function FleetPage() {
                 <div className="h-52 sm:h-60 lg:h-64 mb-6 rounded-2xl bg-gradient-to-br from-emerald-100 via-emerald-50 to-teal-100 overflow-hidden relative group-hover:shadow-lg transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <StationImage
-                    src="/images/fleet/station5.jpg"
+                    src="/images/fleet/station5.JPG"
                     alt="Station Diboli - SYGIM ENERGIES"
                     fallbackEmoji="🌾"
                     className="h-full w-full"

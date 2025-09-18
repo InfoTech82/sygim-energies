@@ -5,11 +5,11 @@
     "services": "Our Services",
     "fleet": "Fleet & Stations",
     "partners": "Partners",
-    "order": "Order",
+    "order": "Request Quote",
     "contact": "Contact"
   },
   "cta": {
-    "orderNow": "Order now"
+    "orderNow": "Request Quote"
   },
   "company": {
     "name": "SYGIM ENERGIES SAS",
@@ -44,8 +44,8 @@
       "features": ["200+ articulated vehicles", "Dynamic team", "Maximum security", "On-time delivery"]
     },
     "rental": {
-      "title": "Petroleum Vehicle Rental",
-      "description": "Rental of specialized vehicles for petroleum products transport with maintenance included.",
+      "title": "Petroleum Tanker Rental",
+      "description": "Rental of specialized tankers for petroleum products transport with maintenance included.",
       "features": ["Modern fleet", "Preventive maintenance", "Driver training", "24/7 technical support"]
     }
   },
@@ -223,8 +223,8 @@
       "features": ["Maximum security", "Full insurance", "Expert team"]
     },
     "rental": {
-      "title": "Premium Vehicle Rental",
-      "description": "High-end vehicles for all your trips",
+      "title": "Premium Tanker Rental",
+      "description": "High-end tankers for all your transport needs",
       "price": "From 25,000 FCFA/day",
       "features": ["Recent vehicles", "Maintenance included", "Insurance", "24/7 support"]
     },
@@ -256,7 +256,7 @@
     "title": "SYGIM",
     "subtitle": "Petroleum Transport Leader",
     "description": "Petroleum products marketing (DIESEL, GASOLINE, OIL) and specialized transport with a fleet of over 200 articulated vehicles. Your trusted partner.",
-    "cta1": "Order now",
+    "cta1": "Request Quote",
     "cta2": "Discover our services",
     "stats": {
       "vehiclesLabel": "Articulated Vehicles",

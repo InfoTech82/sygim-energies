@@ -5,11 +5,11 @@
     "services": "Nos Services",
     "fleet": "Flotte & Stations",
     "partners": "Partenaires",
-    "order": "Commander",
+    "order": "Demander un Devis",
     "contact": "Contact"
   },
   "cta": {
-    "orderNow": "Commander maintenant"
+    "orderNow": "Demander un Devis"
   },
   "company": {
     "name": "SYGIM ENERGIES SAS",
@@ -27,7 +27,7 @@
     "title": "SYGIM",
     "subtitle": "Leader du Transport Pétrolier",
     "description": "Commercialisation de produits pétroliers (GASOIL, SUPER, HUILE) et transport spécialisé avec une flotte de plus de 200 véhicules articulés. Votre partenaire de confiance.",
-    "cta1": "Commander maintenant",
+    "cta1": "Demander un Devis",
     "cta2": "Découvrir nos services",
     "stats": {
       "vehiclesLabel": "Véhicules Articulés",
@@ -63,6 +63,25 @@
         "capacity": "Sur mesure",
         "features": ["Équipements spéciaux", "Formation incluse", "Support technique"]
       }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions complètes pour vos besoins énergétiques",
+    "petroleumMarketing": {
+      "title": "Commercialisation Produits Pétroliers",
+      "description": "Vente en gros et détail de GASOIL, SUPER, HUILE et autres produits pétroliers de qualité premium.",
+      "features": ["GASOIL premium", "SUPER sans plomb", "Huiles moteur", "Livraison en gros/détail"]
+    },
+    "transport": {
+      "title": "Transport de Produits Pétroliers",
+      "description": "Service de transport spécialisé avec une flotte de plus de 200 véhicules articulés modernes.",
+      "features": ["200+ véhicules articulés", "Équipe dynamique", "Sécurité maximale", "Respect des délais"]
+    },
+    "rental": {
+      "title": "Location de Citernes Pétrolières",
+      "description": "Location de citernes spécialisées pour le transport de produits pétroliers avec maintenance incluse.",
+      "features": ["Flotte moderne", "Maintenance préventive", "Formation conducteurs", "Support technique 24/7"]
     }
   }
 }

@@ -24,7 +24,7 @@ const services = [
       features: ["200+ véhicules articulés", "Équipe dynamique", "Sécurité maximale", "Respect des délais"]
     },
     {
-      title: "Location de Véhicules Pétroliers",
+      title: "Location de Citernes Pétrolières",
       description: "Location de véhicules spécialisés pour le transport de produits pétroliers avec maintenance incluse.",
       icon: <Car className="w-12 h-12" />,
       color: "from-green-700 to-green-800",

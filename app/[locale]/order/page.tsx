@@ -26,7 +26,7 @@ export default function OrderPage() {
       features: ["Sécurité maximale", "Assurance complète", "Équipe experte"]
     },
     {
-      title: "Location de Véhicules Premium",
+      title: "Location de Citernes Premium",
       description: "Véhicules haut de gamme pour tous vos déplacements",
       icon: <Car className="w-12 h-12" />,
       color: "from-purple-500 to-violet-500",

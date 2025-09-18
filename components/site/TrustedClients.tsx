@@ -11,22 +11,6 @@ const clientTypes = [
     textColor: "text-blue-600"
   },
   {
-    name: "Agriculteurs",
-    description: "Secteur agricole",
-    icon: <Tractor className="w-8 h-8" />,
-    color: "from-green-500 to-green-600",
-    bgColor: "from-green-50 to-green-100",
-    textColor: "text-green-600"
-  },
-  {
-    name: "BTP",
-    description: "Bâtiment et Travaux Publics",
-    icon: <Building2 className="w-8 h-8" />,
-    color: "from-orange-500 to-orange-600",
-    bgColor: "from-orange-50 to-orange-100",
-    textColor: "text-orange-600"
-  },
-  {
     name: "Collectivités",
     description: "Administrations publiques",
     icon: <Users className="w-8 h-8" />,

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Menu, X, Zap, ChevronDown } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();

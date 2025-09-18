@@ -251,5 +251,18 @@
     "contact": "Contact",
     "followUs": "Follow Us",
     "rights": "All rights reserved"
+  },
+  "hero": {
+    "title": "SYGIM",
+    "subtitle": "Petroleum Transport Leader",
+    "description": "Petroleum products marketing (DIESEL, GASOLINE, OIL) and specialized transport with a fleet of over 200 articulated vehicles. Your trusted partner.",
+    "cta1": "Order now",
+    "cta2": "Discover our services",
+    "stats": {
+      "vehiclesLabel": "Articulated Vehicles",
+      "capitalLabel": "Capital FCFA",
+      "leaderLabel": "Of The Market",
+      "serviceLabel": "Customer Service"
+    }
   }
 }

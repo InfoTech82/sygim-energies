@@ -3,18 +3,20 @@ import { usePathname } from "next/navigation";
 import { useMemo, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ArrowRight, Truck, Building, Shield, Star, Sparkles, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const pathname = usePathname();
   const base = useMemo(() => `/${pathname?.split("/")[1] || "fr"}`, [pathname]);
+  const t = useTranslations('hero');
   const [floatingElements, setFloatingElements] = useState<Array<{id: number, x: number, y: number, size: number, delay: number}>>([]);
 
   const stats = [
-    { icon: <Truck className="w-8 h-8" />, value: "200+", label: "Véhicules Articulés", color: "from-green-500 to-green-600" },
-    { icon: <Building className="w-8 h-8" />, value: "10M", label: "Capital FCFA", color: "from-green-600 to-green-700" },
-    { icon: <Shield className="w-8 h-8" />, value: "Leader", label: "Du Marché", color: "from-green-700 to-green-800" },
-    { icon: <Star className="w-8 h-8" />, value: "24/7", label: "Service Client", color: "from-green-400 to-green-500" },
+    { icon: <Truck className="w-8 h-8" />, value: "200+", label: t('stats.vehiclesLabel'), color: "from-green-500 to-green-600" },
+    { icon: <Building className="w-8 h-8" />, value: "10M", label: t('stats.capitalLabel'), color: "from-green-600 to-green-700" },
+    { icon: <Shield className="w-8 h-8" />, value: "Leader", label: t('stats.leaderLabel'), color: "from-green-700 to-green-800" },
+    { icon: <Star className="w-8 h-8" />, value: "24/7", label: t('stats.serviceLabel'), color: "from-green-400 to-green-500" },
   ];
 
   useEffect(() => {
@@ -97,17 +99,16 @@ export default function Hero() {
 
           {/* Titre Principal - Design Moderne */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 sm:mb-8 animate-slide-up">
-            <div className="text-gradient-3d mb-2 sm:mb-3">SYGIM</div>
+            <div className="text-gradient-3d mb-2 sm:mb-3">{t('title')}</div>
             <div className="text-gray-800 mb-2 sm:mb-4">ENERGIES SAS</div>
             <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-600 font-light">
-              Leader du Transport Pétrolier
+              {t('subtitle')}
             </div>
           </h1>
 
           {/* Description - Design Moderne */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 animate-fade-in px-4">
-            Commercialisation de produits pétroliers (GASOIL, SUPER, HUILE) et transport spécialisé 
-            avec une flotte de plus de 200 véhicules articulés. Votre partenaire de confiance.
+            {t('description')}
           </p>
 
           {/* Boutons CTA - Design Moderne */}
@@ -122,14 +123,14 @@ export default function Hero() {
                     className="object-contain"
                   />
                 </div>
-                <span className="font-bold">Commander maintenant</span>
+                <span className="font-bold">{t('cta1')}</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </Link>
             
             <Link href={`${base}/services`} className="w-full sm:w-auto">
               <button className="btn-outline-modern flex items-center justify-center space-x-3 group w-full sm:w-auto px-6 py-3 sm:py-4 text-sm sm:text-base">
-                <span className="font-semibold">Découvrir nos services</span>
+                <span className="font-semibold">{t('cta2')}</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </Link>

@@ -22,6 +22,19 @@
     "super": "SUPER Sans Plomb", 
     "oil": "Huiles Moteur",
     "transport": "Transport Spécialisé"
+  },
+  "hero": {
+    "title": "SYGIM",
+    "subtitle": "Leader du Transport Pétrolier",
+    "description": "Commercialisation de produits pétroliers (GASOIL, SUPER, HUILE) et transport spécialisé avec une flotte de plus de 200 véhicules articulés. Votre partenaire de confiance.",
+    "cta1": "Commander maintenant",
+    "cta2": "Découvrir nos services",
+    "stats": {
+      "vehiclesLabel": "Véhicules Articulés",
+      "capitalLabel": "Capital FCFA",
+      "leaderLabel": "Du Marché",
+      "serviceLabel": "Service Client"
+    }
   }
 }
 

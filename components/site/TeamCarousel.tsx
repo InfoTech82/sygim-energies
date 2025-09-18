@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Users, Award, User } from "lucide-react";
 
@@ -50,12 +50,12 @@ export default function TeamCarousel() {
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex(currentIndex === teamMembers.length - 1 ? 0 : currentIndex + 1);
     setTimeout(() => setIsTransitioning(false), 300);
-  };
+  }, [currentIndex, isTransitioning]);
 
   const goToSlide = (index: number) => {
     if (isTransitioning || index === currentIndex) return;
@@ -70,7 +70,7 @@ export default function TeamCarousel() {
       goToNext();
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentIndex, isTransitioning]);
+  }, [goToNext]);
 
   const currentMember = teamMembers[currentIndex];
 
@@ -97,10 +97,10 @@ export default function TeamCarousel() {
             </div>
           </div>
           <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
-            Notre Équipe d'Experts
+            Notre Équipe d&apos;Experts
           </h2>
           <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-            Des professionnels passionnés qui transforment l'avenir énergétique du Mali avec 
+            Des professionnels passionnés qui transforment l&apos;avenir énergétique du Mali avec 
             <span className="text-yellow-400 font-bold"> SYGIM ENERGIES</span>
           </p>
         </div>
@@ -183,7 +183,7 @@ export default function TeamCarousel() {
                     <div className="grid grid-cols-3 gap-6 pt-6">
                       <div className="text-center p-4 bg-white/10 rounded-xl border border-white/20 backdrop-blur-sm">
                         <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
-                        <div className="text-sm text-emerald-200">Années d'expertise</div>
+                        <div className="text-sm text-emerald-200">Années d&apos;expertise</div>
                       </div>
                       <div className="text-center p-4 bg-white/10 rounded-xl border border-white/20 backdrop-blur-sm">
                         <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>

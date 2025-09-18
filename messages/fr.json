@@ -13,7 +13,7 @@
   },
   "company": {
     "name": "SYGIM ENERGIES SAS",
-    "capital": "Capital 10 Milliards FCFA",
+    "capital": "Capital 10 Millions FCFA",
     "slogan": "Leader du Transport Pétrolier",
     "description": "Commercialisation de produits pétroliers et transport spécialisé"
   },
@@ -34,6 +34,35 @@
       "capitalLabel": "Capital FCFA",
       "leaderLabel": "Du Marché",
       "serviceLabel": "Service Client"
+    }
+  },
+  "fleet": {
+    "title": "Notre Flotte",
+    "subtitle": "200+ Véhicules Prêts à Servir",
+    "description": "SYGIM ENERGIES SAS dispose d'une flotte conséquente de plus de 200 véhicules articulés toujours prête à servir et honorer ses engagements avec le meilleur service.",
+    "stats": {
+      "vehicles": "200+",
+      "vehiclesLabel": "Véhicules Articulés",
+      "stations": "Bamako+",
+      "stationsLabel": "Stations Internationales",
+      "leader": "Leader",
+      "leaderLabel": "Du Marché",
+      "capital": "10M",
+      "capitalLabel": "Capital FCFA"
+    },
+    "vehicles": {
+      "title": "Notre Flotte de Véhicules",
+      "subtitle": "Des véhicules modernes et fiables pour tous vos besoins",
+      "tankers": {
+        "title": "Camions Citernes",
+        "capacity": "45,000L",
+        "features": ["GPS Tracking", "Sécurité renforcée", "Maintenance préventive"]
+      },
+      "specialized": {
+        "title": "Véhicules Spécialisés",
+        "capacity": "Sur mesure",
+        "features": ["Équipements spéciaux", "Formation incluse", "Support technique"]
+      }
     }
   }
 }

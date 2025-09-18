@@ -13,7 +13,7 @@
   },
   "company": {
     "name": "SYGIM ENERGIES SAS",
-    "capital": "Capital 10 Billion FCFA",
+    "capital": "Capital 10 Million FCFA",
     "slogan": "Petroleum Transport Leader",
     "description": "Petroleum products marketing and specialized transport"
   },
@@ -68,7 +68,7 @@
       "subtitle": "Modern and reliable vehicles for all your needs",
       "tankers": {
         "title": "Tank Trucks",
-        "capacity": "20,000L",
+        "capacity": "45,000L",
         "features": ["GPS Tracking", "Enhanced security", "Preventive maintenance"]
       },
       "specialized": {

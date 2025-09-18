@@ -59,7 +59,7 @@ export default function FleetPage() {
   const vehicles = [
     {
       type: "Camions Citernes",
-      capacity: "20,000L",
+      capacity: "45,000L",
       features: ["GPS Tracking", "Sécurité renforcée", "Maintenance préventive"],
       image: "/images/fleet/camion1.jpg", // Placez votre image ici
       fallbackEmoji: "🚛"

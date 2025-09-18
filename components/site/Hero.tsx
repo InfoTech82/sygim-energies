@@ -93,7 +93,7 @@ export default function Hero() {
                 className="object-contain"
               />
             </div>
-            <span className="text-xs sm:text-sm font-bold text-green-700">SYGIM ENERGIES SAS • Capital 10 Milliards FCFA</span>
+            <span className="text-xs sm:text-sm font-bold text-green-700">SYGIM ENERGIES SAS • Capital 10 Millions FCFA</span>
             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
           </div>
 

@@ -55,7 +55,10 @@ export async function POST(request: Request) {
       try {
         await resend.emails.send({
           from: 'SYGIM ENERGIES <noreply@sygim-energies.com>',
-          to: [process.env.MAIL_TO || 'informatiquetechno03@gmail.com'],
+          to: [
+            process.env.MAIL_TO || 'informatiquetechno03@gmail.com',
+            'tidianisylla4@yahoo.com'
+          ],
           subject: `Nouveau message de contact - ${serviceType || 'Général'}`,
           html: emailContent,
         });

@@ -11,10 +11,10 @@ export default function ServicesPage() {
 const services = [
   {
       title: "Commercialisation Produits Pétroliers",
-      description: "Vente en gros et détail de GASOIL, SUPER, HUILE et autres produits pétroliers de qualité premium.",
+      description: "Vente en gros et détail de GASOIL, SUPER, HUILE et autres produits pétroliers de qualité.",
       icon: <Fuel className="w-12 h-12" />,
       color: "from-green-500 to-green-600",
-      features: ["GASOIL premium", "SUPER sans plomb", "Huiles moteur", "Livraison en gros/détail"]
+      features: ["GASOIL", "SUPER sans plomb", "Huiles moteur", "Livraison en gros/détail"]
     },
     {
       title: "Transport de Produits Pétroliers",

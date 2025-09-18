@@ -88,7 +88,8 @@ export default function Footer() {
         </div>
         <div>
                   <div className="text-white font-semibold">boubatraore@sygim.net</div>
-                  <div className="text-gray-300 text-sm">Email professionnel</div>
+                  <div className="text-white font-semibold">tidianisylla4@yahoo.com</div>
+                  <div className="text-gray-300 text-sm">Emails professionnels</div>
                 </div>
               </div>
               

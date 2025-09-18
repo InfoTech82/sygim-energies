@@ -30,7 +30,7 @@ export default function OrderPage() {
       description: "Véhicules haut de gamme pour tous vos déplacements",
       icon: <Car className="w-12 h-12" />,
       color: "from-purple-500 to-violet-500",
-      price: "À partir de 25,000 FCFA/jour",
+      // price: "À partir de 25,000 FCFA/jour",
       features: ["Véhicules récents", "Maintenance incluse", "Assurance", "Support 24/7"]
     },
   ];

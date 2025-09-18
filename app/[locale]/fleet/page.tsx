@@ -88,7 +88,7 @@ export default function FleetPage() {
   ];
 
   const stations = [
-    { name: "Stations Régionales", location: "Mali", services: ["Vente gros/détail", "GASOIL Premium", "SUPER"] },
+    { name: "Stations Régionales", location: "Mali", services: ["Vente gros/détail", "GASOIL", "SUPER"] },
     { name: "Stations Bamako", location: "Mali", services: ["Expansion internationale", "Produits pétroliers", "Service local"] },
     { name: "Réseau Mondial", location: "Vision Internationale", services: ["Développement global", "Partenariats", "Croissance"] },
   ];

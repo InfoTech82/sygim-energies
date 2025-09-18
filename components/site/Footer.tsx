@@ -78,6 +78,7 @@ export default function Footer() {
                 <div>
                   <div className="text-white font-semibold">BOUBACAR TRAORE - RHQSE</div>
                   <div className="text-gray-300 text-sm">Responsable RHQSE</div>
+                  <div className="text-gray-300 text-sm">+223 44 90 66 92</div>
                 </div>
               </div>
               

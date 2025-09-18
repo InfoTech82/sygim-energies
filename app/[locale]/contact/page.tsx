@@ -8,6 +8,7 @@ export default function ContactPage() {
       icon: <Phone className="w-8 h-8" />,
       title: "Contact Principal",
       value: "BOUBACAR TRAORE",
+      phone: "+223 44 90 66 92",
       description: "RHQSE - Responsable Qualité Sécurité Environnement",
       color: "from-blue-500 to-blue-600"
     },
@@ -95,6 +96,7 @@ export default function ContactPage() {
                 </div>
                 <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2 text-center">{info.title}</h4>
                 <div className="text-base sm:text-lg font-semibold text-green-600 mb-2 text-center">{info.value}</div>
+                <div className="text-base sm:text-lg font-bold text-gray-600 mb-2 text-center">{info.phone}</div>
                 <p className="text-gray-600 text-sm leading-relaxed text-center">{info.description}</p>
               </div>
             ))}

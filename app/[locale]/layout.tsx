@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | SYGIM ENERGIES SAS",
   },
   description:
-    "SYGIM ENERGIES SAS au capital de 10 Milliards FCFA. Commercialisation produits pétroliers (GASOIL, SUPER, HUILE) et transport spécialisé avec 200+ véhicules articulés. Service bilingue.",
+    "SYGIM ENERGIES SAS au capital de 10 Millions FCFA. Commercialisation produits pétroliers (GASOIL, SUPER, HUILE) et transport spécialisé avec 200+ véhicules articulés. Service bilingue.",
 };
 
 const locales = ["fr", "en"] as const;

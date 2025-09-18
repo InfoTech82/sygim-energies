@@ -1,5 +1,5 @@
 "use client";
-import { Truck, Tractor, Building2, Users, Home, Star, Heart, Shield } from "lucide-react";
+import { Truck, Users, Home, Star, Heart, Shield } from "lucide-react";
 
 const clientTypes = [
   {
@@ -50,11 +50,11 @@ export default function TrustedClients() {
         </div>
 
         {/* Types de clients */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
           {clientTypes.map((client, index) => (
             <div 
               key={client.name} 
-              className="card-modern card-3d group animate-scale-in hover:scale-105 transition-all duration-300 p-4 sm:p-6 text-center"
+              className="card-modern card-3d group animate-scale-in hover:scale-105 transition-all duration-300 p-4 sm:p-6 text-center w-64 sm:w-72"
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${client.color} rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500 mx-auto`}>

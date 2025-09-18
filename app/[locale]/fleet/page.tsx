@@ -78,13 +78,13 @@ export default function FleetPage() {
     //   image: "/images/fleet/utilitaire.jpg", // Placez votre image ici
     //   fallbackEmoji: "🚐"
     // },
-    {
-      type: "Véhicules Spécialisés",
-      capacity: "Sur mesure",
-      features: ["Équipements spéciaux", "Formation incluse", "Support technique"],
-      image: "/images/fleet/vehicule-specialise.jpg",
-      fallbackEmoji: "🏗️"
-    },
+    // {
+    //   type: "Véhicules Spécialisés",
+    //   capacity: "Sur mesure",
+    //   features: ["Équipements spéciaux", "Formation incluse", "Support technique"],
+    //   image: "/images/fleet/vehicule-specialise.jpg",
+    //   fallbackEmoji: "🏗️"
+    // },
   ];
 
   const stations = [
@@ -149,9 +149,9 @@ export default function FleetPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
             {vehicles.map((vehicle, index) => (
-              <div key={vehicle.type} className="card-modern card-3d group animate-slide-up p-6 sm:p-8" style={{animationDelay: `${index * 0.1}s`}}>
+              <div key={vehicle.type} className="card-modern card-3d group animate-slide-up p-6 sm:p-8 w-80 sm:w-96" style={{animationDelay: `${index * 0.1}s`}}>
                 {/* Image du véhicule */}
                 <div className="mb-6 sm:mb-8">
                   <div className="h-32 sm:h-40 md:h-48 mb-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 overflow-hidden relative">

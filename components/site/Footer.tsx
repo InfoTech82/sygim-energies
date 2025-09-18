@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
         <div>
                 <div className="text-2xl font-black text-gradient-3d">SYGIM ENERGIES SAS</div>
-                <div className="text-sm text-green-300 font-semibold tracking-wider uppercase">Capital 10 Milliards FCFA</div>
+                <div className="text-sm text-green-300 font-semibold tracking-wider uppercase">Capital 10 Millions FCFA</div>
                 <div className="text-xs text-gray-400 font-medium">Leader du Transport Pétrolier</div>
               </div>
             </div>

@@ -26,7 +26,7 @@ export default function OrderPage() {
       features: ["Sécurité maximale", "Assurance complète", "Équipe experte"]
     },
     {
-      title: "Location de Citernes Premium",
+      title: "Location de Citernes",
       description: "Véhicules haut de gamme pour tous vos déplacements",
       icon: <Car className="w-12 h-12" />,
       color: "from-purple-500 to-violet-500",
@@ -56,8 +56,8 @@ export default function OrderPage() {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6 animate-slide-up">
-              <span className="text-gradient-3d">Commandez</span>{" "}
-              <span className="text-gray-800">Facilement</span>
+              <span className="text-gray-800">Demandez un</span>{" "}
+              <span className="text-gradient-3d">Devis</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">

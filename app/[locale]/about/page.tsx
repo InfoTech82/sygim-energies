@@ -35,7 +35,7 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
-              SYGIM ENERGIES SAS au capital de 10 Milliards FCFA est le leader incontournable 
+              SYGIM ENERGIES SAS au capital de 10 Millions FCFA est le leader incontournable 
               dans la commercialisation de produits pétroliers et le transport spécialisé.
             </p>
           </div>
@@ -175,8 +175,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
-            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.1s'}}>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-6xl mx-auto">
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300 w-48 sm:w-56" style={{animationDelay: '0.1s'}}>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
@@ -184,23 +184,7 @@ export default function AboutPage() {
               <p className="text-xs text-gray-600">Professionnels du transport</p>
             </div>
 
-            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.2s'}}>
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
-                <Zap className="w-6 h-6 sm:w-8 sm:h-8" />
-              </div>
-              <h3 className="text-sm sm:text-base font-bold text-green-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Agriculteurs</h3>
-              <p className="text-xs text-gray-600">Secteur agricole</p>
-            </div>
-
-            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.3s'}}>
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
-                <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
-              </div>
-              <h3 className="text-sm sm:text-base font-bold text-orange-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">BTP</h3>
-              <p className="text-xs text-gray-600">Bâtiment et Travaux Publics</p>
-            </div>
-
-            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300 w-48 sm:w-56" style={{animationDelay: '0.4s'}}>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Star className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
@@ -208,7 +192,7 @@ export default function AboutPage() {
               <p className="text-xs text-gray-600">Administrations publiques</p>
             </div>
 
-            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300" style={{animationDelay: '0.5s'}}>
+            <div className="card-modern card-3d animate-scale-in p-4 sm:p-6 text-center group hover:scale-105 transition-all duration-300 w-48 sm:w-56" style={{animationDelay: '0.5s'}}>
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>

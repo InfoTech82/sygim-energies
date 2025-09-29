@@ -16,7 +16,7 @@ export default function ContactPage() {
       icon: <Mail className="w-8 h-8" />,
       title: "Emails de Contact",
       value: "boubatraore@sygim.net",
-      description: "tidianisylla4@yahoo.com - Contact direct pour tous vos besoins",
+      description: "tidianisylla4@yahoo.com",
       color: "from-green-500 to-green-600"
     },
     {

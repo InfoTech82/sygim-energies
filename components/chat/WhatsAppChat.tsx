@@ -9,7 +9,7 @@ interface WhatsAppChatProps {
 }
 
 export default function WhatsAppChat({
-  phoneNumber = "+22344906692",
+  phoneNumber = "+22382721469",
   message = "Bonjour ! Je souhaite obtenir des informations sur vos services.",
   position = "bottom-right"
 }: WhatsAppChatProps) {

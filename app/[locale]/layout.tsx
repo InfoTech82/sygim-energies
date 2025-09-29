@@ -2,15 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import frMessages from "../../messages/fr.json";
-import enMessages from "../../messages/en.json";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import LoaderWrapper from "@/components/ui/LoaderWrapper";
-import WhatsAppChat from "@/components/chat/WhatsAppChat";
-import SEOHead from "@/components/seo/SEOHead";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,13 +42,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = locale === 'fr' ? frMessages : enMessages;
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <head>
-        <SEOHead />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages} locale={locale} timeZone="Africa/Abidjan">
           <LoaderWrapper>
@@ -61,10 +54,6 @@ export default async function LocaleLayout({
               {children}
             </main>
             <Footer />
-            <WhatsAppChat 
-              phoneNumber="+22344906692"
-              message="Bonjour ! Je souhaite obtenir des informations sur vos services SYGIM ENERGIES."
-            />
           </LoaderWrapper>
         </NextIntlClientProvider>
       </body>

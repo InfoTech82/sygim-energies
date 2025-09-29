@@ -107,7 +107,7 @@ export default function TeamCarousel() {
 
         <div className="max-w-7xl mx-auto">
           {/* Main Card */}
-          <div className="relative">
+              <div className="relative">
             {/* Glow Effect */}
             <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
             
@@ -135,9 +135,9 @@ export default function TeamCarousel() {
                   <div className="absolute top-6 right-6 z-20">
                     <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 border border-white/30">
                       {currentMember.icon}
-                    </div>
-                  </div>
-                  
+                </div>
+              </div>
+
                   {/* Overlay with member info */}
                   <div className="absolute bottom-6 left-6 right-6 z-20">
                     <div className="bg-white/15 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-xl">
@@ -147,11 +147,11 @@ export default function TeamCarousel() {
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-white">
-                            {currentMember.name}
-                          </h3>
+                  {currentMember.name}
+                </h3>
                           <p className="text-emerald-200 font-semibold">
-                            {currentMember.position}
-                          </p>
+                  {currentMember.position}
+                </p>
                         </div>
                       </div>
                     </div>
@@ -171,10 +171,10 @@ export default function TeamCarousel() {
                         </div>
                         <p className="text-2xl text-emerald-200 font-semibold">
                           {currentMember.position}
-                        </p>
-                      </div>
-                    </div>
-                    
+                </p>
+              </div>
+            </div>
+
                     <p className="text-emerald-100 leading-relaxed text-lg">
                       {currentMember.description}
                     </p>
@@ -200,12 +200,12 @@ export default function TeamCarousel() {
             </div>
 
             {/* Enhanced Navigation Arrows */}
-            <button
-              onClick={goToPrevious}
+              <button
+                onClick={goToPrevious}
               className="absolute left-6 top-1/2 -translate-y-1/2 z-30 w-14 h-14 bg-white/20 backdrop-blur-xl rounded-full shadow-2xl flex items-center justify-center text-white hover:text-emerald-300 hover:bg-white/30 transition-all duration-300 group border border-white/30"
-            >
+              >
               <ChevronLeft className="w-7 h-7 group-hover:scale-110 transition-transform" />
-            </button>
+              </button>
 
             <button
               onClick={goToNext}
@@ -218,9 +218,9 @@ export default function TeamCarousel() {
           {/* Enhanced Dots Navigation */}
           <div className="flex justify-center mt-12 space-x-4">
             {teamMembers.map((member, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
                 className={`group relative transition-all duration-500 ${
                   index === currentIndex 
                     ? 'w-16 h-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full shadow-lg' 
@@ -231,8 +231,8 @@ export default function TeamCarousel() {
                   <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 rounded-full animate-pulse"></div>
                 )}
               </button>
-            ))}
-          </div>
+                ))}
+              </div>
 
           {/* Enhanced Team Preview Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -270,7 +270,7 @@ export default function TeamCarousel() {
                       index === currentIndex ? 'bg-gradient-to-r from-emerald-500/30 to-cyan-500/30' : 'bg-white/10'
                     }`}>
                       {member.icon}
-                    </div>
+            </div>
                   </div>
                 </div>
               </div>

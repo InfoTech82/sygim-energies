@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import frMessages from "../../messages/fr.json";
+import enMessages from "../../messages/en.json";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/site/Navbar";
@@ -44,7 +46,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  const messages = locale === 'fr' ? frMessages : enMessages;
 
   return (
     <html lang={locale}>

@@ -186,7 +186,7 @@ Message envoyé automatiquement le ${new Date().toLocaleDateString('fr-FR')} à 
 
         await transporter.sendMail(mailOptions);
         console.log('✅ Email envoyé via Nodemailer + Gmail SMTP');
-      } catch (emailError: any) {
+      } catch (emailError: unknown) {
         console.error('❌ Erreur Nodemailer:', emailError);
         // Fallback vers logging en cas d'erreur
         console.log('=== NOUVEAU MESSAGE DE CONTACT (Fallback) ===');

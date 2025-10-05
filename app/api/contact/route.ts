@@ -177,7 +177,7 @@ Message envoyé automatiquement le ${new Date().toLocaleDateString('fr-FR')} à 
         const mailOptions = {
           from: `SYGIM ENERGIES <${process.env.GMAIL_USER}>`,
           to: [
-            process.env.MAIL_TO || 'informatiquetechno03@gmail.com', 'tidianisylla4@yahoo.com'
+            process.env.MAIL_TO || 'informatiquetechno03@gmail.com', 'tidianisylla4@yahoo.com', 'boubatraore@sygim.net', 'bintasylla@sygim.net'
           ],
           subject: `Nouveau message de contact - ${serviceType || 'Général'}`,
           text: textContent,

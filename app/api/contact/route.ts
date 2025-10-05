@@ -171,6 +171,14 @@ Message envoyé automatiquement le ${new Date().toLocaleDateString('fr-FR')} à 
 ═══════════════════════════════════════════════════════════════
     `;
 
+    // Debug des variables d'environnement
+    console.log('🔍 Debug Vercel - Variables d\'environnement:');
+    console.log('GMAIL_USER:', process.env.GMAIL_USER ? '✅ Définie' : '❌ Manquante');
+    console.log('GMAIL_APP_PASSWORD:', process.env.GMAIL_APP_PASSWORD ? '✅ Définie' : '❌ Manquante');
+    console.log('MAIL_TO:', process.env.MAIL_TO ? '✅ Définie' : '❌ Manquante');
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('VERCEL:', process.env.VERCEL ? '✅ Environnement Vercel' : '❌ Local');
+
     // Envoi de l'email avec Nodemailer
     if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
       try {
@@ -178,17 +186,24 @@ Message envoyé automatiquement le ${new Date().toLocaleDateString('fr-FR')} à 
           from: `SYGIM ENERGIES <${process.env.GMAIL_USER}>`,
           to: [
             process.env.MAIL_TO || 'informatiquetechno03@gmail.com',
-            'koumabouba13@gmail.com', 'doumbiaoumar02006@gmail.com'
+            'koumabouba13@gmail.com',
+            'doumbiaoumar02006@gmail.com'
           ],
           subject: `Nouveau message de contact - ${serviceType || 'Général'}`,
           text: textContent,
           html: emailContent,
         };
 
+        console.log('📧 Tentative d\'envoi email...');
+        console.log('Destinataires:', mailOptions.to);
+        
         await transporter.sendMail(mailOptions);
-        console.log('✅ Email envoyé via Nodemailer + Gmail SMTP');
+        console.log('✅ Email envoyé avec succès via Nodemailer + Gmail SMTP');
       } catch (emailError) {
-        console.error('❌ Erreur Nodemailer:', emailError);
+        console.error('❌ Erreur Nodemailer détaillée:', emailError);
+        console.error('Code d\'erreur:', emailError.code);
+        console.error('Message d\'erreur:', emailError.message);
+        
         // Fallback vers logging en cas d'erreur
         console.log('=== NOUVEAU MESSAGE DE CONTACT (Fallback) ===');
         console.log(`Nom: ${name}`);
@@ -201,10 +216,15 @@ Message envoyé automatiquement le ${new Date().toLocaleDateString('fr-FR')} à 
       }
     } else {
       // Fallback: logging si pas de configuration Gmail
-      console.log('=== NOUVEAU MESSAGE DE CONTACT (Mode Développement) ===');
+      console.log('=== NOUVEAU MESSAGE DE CONTACT (Configuration manquante) ===');
       console.log('⚠️ Configuration Gmail manquante - Variables d\'environnement requises:');
       console.log('- GMAIL_USER: Votre adresse Gmail');
       console.log('- GMAIL_APP_PASSWORD: Mot de passe d\'application Gmail');
+      console.log('');
+      console.log('🔧 Solution Vercel:');
+      console.log('1. Allez sur vercel.com → Votre projet → Settings');
+      console.log('2. Environment Variables → Ajoutez GMAIL_USER et GMAIL_APP_PASSWORD');
+      console.log('3. Redéployez le projet');
       console.log('');
       console.log('Données du message:');
       console.log(`Nom: ${name}`);

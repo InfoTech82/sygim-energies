@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Mail, Phone as PhoneIcon, ExternalLink } from "lucide-react";
 
 type Theme = "light" | "dark";
 
@@ -32,7 +33,13 @@ export const defaultTechmaCorporationConfig = {
         dark: "/s1.png",
     } as Logos,
     name: "TechmaCorporation",
-    services: ["Site web & développement", "Applications Web, Mobile & Desktop, Logos / Affiches / Divers"],
+    services: [
+        "Sites web & plateformes en ligne",
+        "Applications Web, Mobile & Desktop",
+        "Design graphique (logos, affiches, branding)",
+        "Support & solutions informatiques",
+        "Ventes de matériel informatique"
+      ],
     email: "informatiquetechno03@gmail.com",
     phone: "+223 82 72 14 69",
     href:
@@ -79,14 +86,15 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
                     aria-label={`Ouvrir le site ${name} dans un nouvel onglet`}
                     title={`${name} — développement web`}
                     className={`
-                        group relative inline-flex items-center gap-4
-                        px-6 py-4 rounded-xl
+                        group relative inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4
+                        px-4 sm:px-6 py-3 sm:py-4 rounded-xl
                         ${isDark 
                             ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white' 
                             : 'bg-white/90 border border-slate-200 text-gray-900'
                         }
                         transition-all duration-300
                         hover:border-green-400/50 hover:shadow-lg hover:shadow-green-500/20
+                        w-full sm:w-auto max-w-sm sm:max-w-none
                     `}
                     {...linkProps}
                 >
@@ -100,29 +108,30 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
                     transition={{ duration: 0.5 }}
                 >
                     <div className={`
-                        rounded-xl p-2
+                        rounded-xl p-1.5 sm:p-2
                         ${isDark ? 'bg-gray-800/50' : 'bg-slate-100'}
                         ring-2 ring-offset-2
                         ${isDark ? 'ring-green-500/30 ring-offset-gray-900' : 'ring-slate-300 ring-offset-white'}
                         group-hover:ring-green-500/50 transition-all duration-300
+                        flex-shrink-0
                     `}>
                         <Image
                             src={selectedLogo}
                             alt={`Logo ${name}`}
-                            width={imageSize.width}
-                            height={imageSize.height}
+                            width={imageSize.width ? Math.min(imageSize.width, 60) : 60}
+                            height={imageSize.height ? Math.min(imageSize.height, 60) : 60}
                             quality={imageSize.quality}
                             loading="lazy"
-                            className="drop-shadow-md"
+                            className="drop-shadow-md w-12 h-12 sm:w-auto sm:h-auto"
                         />
                     </div>
                 </motion.div>
 
                 {/* Informations */}
-                <div className="flex flex-col gap-1 min-w-0">
+                <div className="flex flex-col gap-1 min-w-0 flex-1 text-center sm:text-left">
                     <motion.span
                         className={`
-                            font-bold text-base
+                            font-bold text-sm sm:text-base
                             ${isDark ? 'text-white' : 'text-gray-900'}
                             group-hover:text-green-400 transition-colors duration-300
                         `}
@@ -140,7 +149,7 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1, duration: 0.3 }}
                                     className={`
-                                        text-xs leading-tight
+                                        text-xs leading-tight break-words
                                         ${isDark ? 'text-gray-400' : 'text-gray-600'}
                                         group-hover:text-gray-300 transition-colors duration-300
                                     `}
@@ -151,50 +160,51 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
                         </div>
                     )}
                     
-                    <motion.small
+                    <motion.a
+                        href={`mailto:${email}`}
                         className={`
-                            text-xs font-medium mt-1
+                            text-xs font-medium mt-1 flex items-center justify-center sm:justify-start gap-1.5
                             ${isDark ? 'text-green-400' : 'text-green-600'}
-                            group-hover:underline transition-all duration-300
+                            hover:underline transition-all duration-300 break-all
                         `}
                         whileHover={{ x: 2 }}
+                        onClick={(e) => e.stopPropagation()}
                     >
-                        {email}
-                    </motion.small>
+                        <Mail className="w-3 h-3 flex-shrink-0" />
+                        <span className="break-all">{email}</span>
+                    </motion.a>
                     
                     {phone && (
                         <motion.a
                             href={`tel:${phone.replace(/\s/g, '')}`}
                             className={`
-                                text-xs font-medium mt-1
+                                text-xs font-medium mt-1 flex items-center justify-center sm:justify-start gap-1.5
                                 ${isDark ? 'text-green-400' : 'text-green-600'}
                                 hover:underline transition-all duration-300
                             `}
                             whileHover={{ x: 2 }}
                             onClick={(e) => e.stopPropagation()}
                         >
+                            <PhoneIcon className="w-3 h-3 flex-shrink-0" />
                             {phone}
                         </motion.a>
                     )}
                 </div>
 
                 {/* Icône de flèche au hover */}
-                <motion.svg
-                    className={`
-                        w-5 h-5 flex-shrink-0
-                        ${isDark ? 'text-gray-400' : 'text-gray-500'}
-                        group-hover:text-green-400
-                        transition-colors duration-300
-                    `}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <motion.div
+                    className="flex-shrink-0 hidden sm:block"
                     initial={{ x: 0 }}
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </motion.svg>
+                    <ExternalLink className={`
+                        w-5 h-5
+                        ${isDark ? 'text-gray-400' : 'text-gray-500'}
+                        group-hover:text-green-400
+                        transition-colors duration-300
+                    `} />
+                </motion.div>
             </a>
             </motion.div>
         </motion.div>

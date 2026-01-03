@@ -7,6 +7,8 @@ import "../globals.css";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import LoaderWrapper from "@/components/ui/LoaderWrapper";
+import PoweredByBadge from "@/components/site/PoweredByBadge";
+import Watermark from "@/components/site/Watermark";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,11 +51,13 @@ export default async function LocaleLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider messages={messages} locale={locale} timeZone="Africa/Abidjan">
           <LoaderWrapper>
+            <Watermark />
             <Navbar />
-            <main className="min-h-screen">
+            <main className="min-h-screen relative z-10">
               {children}
             </main>
             <Footer />
+            <PoweredByBadge />
           </LoaderWrapper>
         </NextIntlClientProvider>
       </body>

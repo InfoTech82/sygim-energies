@@ -1,0 +1,16 @@
+[33mcommit c6e6a986387544d112255f4237857d8fb3cc197d[m
+Author: Seydou Doumbia <informatiquetechno03@gmail.com>
+Date:   Sun Oct 5 17:04:33 2025 +0200
+
+     Ajout du logo SYGIM ENERGIES dans les emails + nouvelle adresse email
+    
+    -  Logo stylisé avec effet glassmorphism dans le header HTML
+    -  Emoji éclair + typographie SYGIM ENERGIES professionnelle
+    -  Mini-logo dans le footer pour cohérence visuelle
+    -  Version texte brut avec logo ASCII et séparateurs élégants
+    -  Ajout de informatiquetechno03@gmail.com et tidianesylla4@yahoo.com dans les destinataires
+    -  Identité visuelle renforcée : 'Leader Transport Pétrolier au Mali'
+    -  Compatibilité universelle : fonctionne sur tous les clients email
+
+ app/api/contact/route.ts | 185 [32m++++++++++++++++++++++++++++++++++++++++[m[31m-------[m
+ 1 file changed, 157 insertions(+), 28 deletions(-)

@@ -147,11 +147,56 @@
     },
     "team": {
       "title": "Our Team",
-      "subtitle": "The professionals who make SYGIM ENERGIES strong"
+      "subtitle": "Passionate professionals transforming Mali's energy future"
+    },
+    "milestones": {
+      "title": "Our Journey",
+      "subtitle": "Discover the key steps that made SYGIM ENERGIES the petroleum transport leader",
+      "foundation": {
+        "year": "Foundation",
+        "description": "Creation with a capital of 10 Million FCFA"
+      },
+      "expansion": {
+        "year": "Expansion",
+        "title": "Fleet of 200+ Vehicles",
+        "description": "Development of a substantial fleet"
+      },
+      "leadership": {
+        "year": "Leadership",
+        "title": "Market Leader Position",
+        "description": "Unbeatable market leader"
+      },
+      "international": {
+        "year": "International",
+        "title": "Bamako Expansion",
+        "description": "Opening of stations in Mali"
+      }
     },
     "clients": {
-      "title": "Our Trusted Clients",
-      "subtitle": "SYGIM ENERGIES SAS is proud to count among its clients professionals from all sectors of activity, demonstrating our versatility and reliability.",
+      "title": "Our Mining Clients",
+      "subtitle": "In partnership with Vivo Energy, we serve Mali's largest mines",
+      "mines": {
+        "title": "Mines Served",
+        "description": "In partnership with Vivo Energy, SYGIM ENERGIES serves Mali's most important mines:",
+        "goungoto": "Goungoto",
+        "loulo": "Loulo",
+        "tabakoto": "Tabakoto",
+        "nampala": "Nampala",
+        "komana": "KOMANA",
+        "yanfolila": "Yanfolila"
+      },
+      "garages": {
+        "title": "Garages & Stations",
+        "description": "We also serve garages and service stations throughout Mali",
+        "service": "Professional service",
+        "quality": "Quality products",
+        "delivery": "Fast delivery",
+        "support": "Technical support"
+      },
+      "trustedClients": {
+        "title": "They trust us",
+        "subtitle": "A diversity of clients that demonstrates our versatility and expertise"
+      },
       "types": {
         "transporters": "Transporters",
         "farmers": "Farmers",

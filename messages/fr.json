@@ -83,6 +83,122 @@
       "description": "Location de citernes spécialisées pour le transport de produits pétroliers avec maintenance incluse.",
       "features": ["Flotte moderne", "Maintenance préventive", "Formation conducteurs", "Support technique 24/7"]
     }
+  },
+  "about": {
+    "title": "À Propos de SYGIM ENERGIES SAS",
+    "subtitle": "Leader du Transport Pétrolier",
+    "description": "SYGIM ENERGIES SAS au capital de 10 Millions FCFA est le leader incontournable dans la commercialisation de produits pétroliers et le transport spécialisé.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Commercialiser des produits pétroliers de qualité (GASOIL, SUPER, HUILE) et fournir des services de transport spécialisés avec une flotte moderne de plus de 200 véhicules articulés, en privilégiant nos employés et l'environnement."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Maintenir notre position de LEADER incontournable dans la vente et location de véhicules pétroliers, tout en étendant notre présence avec nos stations à Bamako et à l'international pour une vision mondiale."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "quality": "Qualité",
+      "safety": "Sécurité",
+      "reliability": "Fiabilité",
+      "innovation": "Innovation"
+    },
+    "milestones": {
+      "title": "Notre Parcours",
+      "subtitle": "Découvrez les étapes clés qui ont fait de SYGIM ENERGIES le leader du transport pétrolier",
+      "foundation": {
+        "year": "Fondation",
+        "description": "Création avec un capital de 10 Millions FCFA"
+      },
+      "expansion": {
+        "year": "Expansion",
+        "title": "Flotte de 200+ Véhicules",
+        "description": "Développement d'une flotte conséquente"
+      },
+      "leadership": {
+        "year": "Leadership",
+        "title": "Position de Leader",
+        "description": "Leader incontournable du marché"
+      },
+      "international": {
+        "year": "International",
+        "title": "Expansion Bamako",
+        "description": "Ouverture de stations au Mali"
+      }
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Des professionnels passionnés qui transforment l'avenir énergétique du Mali"
+    },
+    "clients": {
+      "title": "Nos Clients Miniers",
+      "subtitle": "En partenariat avec Vivo Energy, nous servons les plus grandes mines du Mali",
+      "mines": {
+        "title": "Mines Servies",
+        "description": "En partenariat avec Vivo Energy, SYGIM ENERGIES dessert les plus importantes mines du Mali :",
+        "goungoto": "Goungoto",
+        "loulo": "Loulo",
+        "tabakoto": "Tabakoto",
+        "nampala": "Nampala",
+        "komana": "KOMANA",
+        "yanfolila": "Yanfolila"
+      },
+      "garages": {
+        "title": "Garages & Stations",
+        "description": "Nous servons également les garages et stations-service à travers le Mali",
+        "service": "Service professionnel",
+        "quality": "Produits de qualité",
+        "delivery": "Livraison rapide",
+        "support": "Support technique"
+      },
+      "trustedClients": {
+        "title": "Ils nous font confiance",
+        "subtitle": "Une diversité de clients qui témoigne de notre polyvalence et de notre expertise"
+      }
+    }
+  },
+  "partners": {
+    "title": "Nos Partenaires",
+    "subtitle": "Partenaires de confiance pour des solutions énergétiques de qualité",
+    "description": "SYGIM ENERGIES SAS s'appuie sur un réseau de partenaires de confiance pour offrir des solutions énergétiques de qualité et un service d'excellence.",
+    "referencePartners": {
+      "title": "Nos Partenaires de Référence",
+      "subtitle": "Des leaders de l'industrie partageant nos valeurs d'excellence et d'innovation"
+    },
+    "benefits": {
+      "title": "Avantages du Partenariat",
+      "subtitle": "Les avantages de s'associer avec SYGIM ENERGIES SAS",
+      "network": {
+        "title": "Réseau Établi",
+        "description": "Plus de 15 ans d'expérience dans le secteur énergétique avec un réseau de confiance établi"
+      },
+      "quality": {
+        "title": "Assurance Qualité",
+        "description": "Contrôle qualité rigoureux et conformité aux standards internationaux"
+      },
+      "support": {
+        "title": "Support Technique",
+        "description": "Support technique 24/7 et formation pour nos partenaires"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour répondre à vos besoins énergétiques",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "phone": "Téléphone",
+      "service": "Type de service",
+      "message": "Message",
+      "submit": "Envoyer le message"
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Email",
+      "hours": "Heures d'ouverture"
+    }
   }
 }
 

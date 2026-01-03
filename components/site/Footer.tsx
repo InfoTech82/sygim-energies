@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Zap, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Star, Sparkles, Handshake } from "lucide-react";
+import TechmaCorporation from "./TechmaCorporation";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -140,6 +141,16 @@ export default function Footer() {
 
         {/* Bottom section - Design Moderne */}
         <div className="border-t border-gray-600 mt-20 pt-12">
+          {/* Section Développeur */}
+          <div className="mb-12">
+            <div className="text-center mb-6">
+              <h5 className="text-sm text-gray-400 font-semibold uppercase tracking-wider mb-4">Développé par</h5>
+            </div>
+            <div className="flex justify-center">
+              <TechmaCorporation theme="dark" />
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-8 mb-8 md:mb-0">
               <span className="text-gray-400 font-semibold">Suivez-nous :</span>

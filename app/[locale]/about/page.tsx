@@ -3,20 +3,17 @@ import { Building2, Target, Sparkles, Award, ArrowRight, ChevronRight, Star, Zap
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { useTranslations } from "next-intl";
 import TeamCarousel from "@/components/site/TeamCarousel";
 
 export default function AboutPage() {
   const pathname = usePathname();
   const base = useMemo(() => `/${pathname?.split("/")[1] || "fr"}`, [pathname]);
-  const t = useTranslations('about');
-  const company = useTranslations('company');
 
   const milestones = [
-    { year: t('milestones.foundation.year'), title: company('name'), description: t('milestones.foundation.description'), icon: <Building2 className="w-6 h-6" />, color: "from-green-500 to-green-600" },
-    { year: t('milestones.expansion.year'), title: t('milestones.expansion.title'), description: t('milestones.expansion.description'), icon: <Zap className="w-6 h-6" />, color: "from-green-600 to-green-700" },
-    { year: t('milestones.leadership.year'), title: t('milestones.leadership.title'), description: t('milestones.leadership.description'), icon: <Award className="w-6 h-6" />, color: "from-green-700 to-green-800" },
-    { year: t('milestones.international.year'), title: t('milestones.international.title'), description: t('milestones.international.description'), icon: <Star className="w-6 h-6" />, color: "from-green-400 to-green-500" },
+    { year: "Fondation", title: "SYGIM ENERGIES SAS", description: "Création avec un capital de 10 Milliards FCFA", icon: <Building2 className="w-6 h-6" />, color: "from-green-500 to-green-600" },
+    { year: "Expansion", title: "Flotte de 200+ Véhicules", description: "Développement d'une flotte conséquente", icon: <Zap className="w-6 h-6" />, color: "from-green-600 to-green-700" },
+    { year: "Leadership", title: "Position de Leader", description: "Leader incontournable du marché", icon: <Award className="w-6 h-6" />, color: "from-green-700 to-green-800" },
+    { year: "International", title: "Expansion Bamako", description: "Ouverture de stations au Mali", icon: <Star className="w-6 h-6" />, color: "from-green-400 to-green-500" },
   ];
 
   return (
@@ -28,16 +25,18 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto text-center animate-fade-in">
             <div className="inline-flex items-center space-x-2 sm:space-x-4 glass-effect rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 mb-8 sm:mb-12 shadow-modern">
               <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
-              <span className="text-xs sm:text-sm font-bold text-green-700">{t('title')}</span>
+              <span className="text-xs sm:text-sm font-bold text-green-700">À Propos de SYGIM ENERGIES SAS</span>
               <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6 animate-slide-up">
-              <span className="text-gradient-3d">{t('subtitle')}</span>
+              <span className="text-gradient-3d">Leader du</span>{" "}
+              <span className="text-gray-800">Transport Pétrolier</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
-              {t('description')}
+              SYGIM ENERGIES SAS au capital de 10 Millions FCFA est le leader incontournable 
+              dans la commercialisation de produits pétroliers et le transport spécialisé.
             </p>
           </div>
         </div>
@@ -51,9 +50,11 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
                 <Target className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">{t('mission.title')}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Notre Mission</h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-                {t('mission.description')}
+                Commercialiser des produits pétroliers de qualité (GASOIL, SUPER, HUILE) et 
+                fournir des services de transport spécialisés avec une flotte moderne de plus de 
+                200 véhicules articulés, en privilégiant nos employés et l&apos;environnement.
               </p>
             </div>
 
@@ -61,9 +62,11 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
                 <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">{t('vision.title')}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Notre Vision</h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-                {t('vision.description')}
+                Maintenir notre position de LEADER incontournable dans la vente et location de 
+                véhicules pétroliers, tout en étendant notre présence avec nos stations à Bamako 
+                et à l&apos;international pour une vision mondiale.
               </p>
             </div>
           </div>
@@ -75,10 +78,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
-              <span className="text-gradient-3d">{t('clients.title')}</span>
+              <span className="text-gradient-3d">Nos Clients</span>{" "}
+              <span className="text-gray-800">Miniers</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              {t('clients.subtitle')}
+              En partenariat avec Vivo Energy, nous servons les plus grandes mines du Mali
             </p>
           </div>
 
@@ -88,34 +92,34 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
                 <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">{t('clients.mines.title')}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Mines Servies</h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-6">
-                {t('clients.mines.description')}
+                En partenariat avec <strong>Vivo Energy</strong>, SYGIM ENERGIES dessert les plus importantes mines du Mali :
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.goungoto')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Goungoto</span>
                 </div>
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.loulo')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Loulo</span>
                 </div>
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.tabakoto')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Tabakoto</span>
                 </div>
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.nampala')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Nampala</span>
                 </div>
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.komana')}</span>
+                  <span className="text-sm font-semibold text-gray-700">KOMANA</span>
                 </div>
                 <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-xl">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.mines.yanfolila')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Yanfolila</span>
                 </div>
               </div>
               <p className="text-sm text-gray-500 mt-4 italic">
@@ -128,26 +132,26 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white shadow-modern mb-4 sm:mb-6 group-hover:shadow-modern-lg transition-all duration-500">
                 <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">{t('clients.garages.title')}</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-gradient-modern transition-all duration-500">Garage Moderne</h3>
               <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-6">
-                {t('clients.garages.description')}
+                SYGIM ENERGIES possède un <strong>garage moderne</strong> pour l&apos;entretien de sa flotte avec une équipe expérimentée et dynamique.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.garages.service')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Équipements modernes</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.garages.quality')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Équipe expérimentée</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.garages.delivery')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Maintenance préventive</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-gray-700">{t('clients.garages.support')}</span>
+                  <span className="text-sm font-semibold text-gray-700">Service 24/7</span>
                 </div>
               </div>
               <p className="text-sm text-gray-500 mt-4 italic">
@@ -163,10 +167,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
-              <span className="text-gradient-3d">{t('clients.trustedClients.title')}</span>
+              <span className="text-gradient-3d">Ils nous font</span>{" "}
+              <span className="text-gray-800">confiance</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              {t('clients.trustedClients.subtitle')}
+              Une diversité de clients qui témoigne de notre polyvalence et de notre expertise
             </p>
           </div>
 
@@ -175,7 +180,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-blue-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">{t('clients.types.transporters')}</h3>
+              <h3 className="text-sm sm:text-base font-bold text-blue-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Transporteurs</h3>
               <p className="text-xs text-gray-600">Professionnels du transport</p>
             </div>
 
@@ -183,7 +188,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Star className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-purple-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">{t('clients.types.communities')}</h3>
+              <h3 className="text-sm sm:text-base font-bold text-purple-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Collectivités</h3>
               <p className="text-xs text-gray-600">Administrations publiques</p>
             </div>
 
@@ -191,7 +196,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-white shadow-modern mb-3 sm:mb-4 group-hover:shadow-modern-lg transition-all duration-500 mx-auto">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-sm sm:text-base font-bold text-pink-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">{t('clients.types.individuals')}</h3>
+              <h3 className="text-sm sm:text-base font-bold text-pink-600 mb-1 group-hover:text-gradient-modern transition-all duration-500">Particuliers</h3>
               <p className="text-xs text-gray-600">Clients individuels</p>
             </div>
           </div>
@@ -219,10 +224,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6">
-              <span className="text-gradient-3d">{t('milestones.title')}</span>
+              <span className="text-gradient-3d">Notre</span>{" "}
+              <span className="text-gray-800">Parcours</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              {t('milestones.subtitle')}
+              Découvrez les étapes clés qui ont fait de SYGIM ENERGIES le leader du transport pétrolier
             </p>
           </div>
 

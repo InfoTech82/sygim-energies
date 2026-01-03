@@ -17,6 +17,7 @@ type TechmaCorporationProps = {
     name?: string;
     services?: string[];
     email?: string;
+    phone?: string;
     href?: string;
     style?: React.CSSProperties;
     linkProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
@@ -31,8 +32,9 @@ export const defaultTechmaCorporationConfig = {
         dark: "/s1.png",
     } as Logos,
     name: "TechmaCorporation",
-    services: ["Site web & développement", "Logos / Affiches / Divers"],
+    services: ["Site web & développement", "Applications Web, Mobile & Desktop, Logos / Affiches / Divers"],
     email: "informatiquetechno03@gmail.com",
+    phone: "+223 82 72 14 69",
     href:
         "mailto:informatiquetechno03@gmail.com?subject=Contact%20depuis%20SYGIM%20ENERGIES",
     imageSize: { width: 70, height: 70, quality: 80 },
@@ -46,6 +48,7 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
         name,
         services,
         email,
+        phone,
         href,
         style,
         linkProps,
@@ -158,6 +161,21 @@ export const TechmaCorporation: React.FC<TechmaCorporationProps> = (props) => {
                     >
                         {email}
                     </motion.small>
+                    
+                    {phone && (
+                        <motion.a
+                            href={`tel:${phone.replace(/\s/g, '')}`}
+                            className={`
+                                text-xs font-medium mt-1
+                                ${isDark ? 'text-green-400' : 'text-green-600'}
+                                hover:underline transition-all duration-300
+                            `}
+                            whileHover={{ x: 2 }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {phone}
+                        </motion.a>
+                    )}
                 </div>
 
                 {/* Icône de flèche au hover */}
